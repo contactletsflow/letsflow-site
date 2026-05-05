@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Flow — Séminaires d'exception à Préa, Brésil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1812;--bark:#3d2f1e;--terra:#b5502a;--terra-deep:#8c3a1c;--sage:#6b7f62;--sage-light:#8fa483;--sage-pale:#c8d4c0;--beige:#f0e8d8;--linen:#faf6ef;--sand:#e8dcc8;--cream:#fdfaf4;--gold:#c9923a;--warm-white:#fefcf8;--line:rgba(28,24,18,.1)}
+*{margin:0;padding:0;box-sizing:border-box}*::selection{background:var(--terra);color:var(--cream)}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:var(--warm-white);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;cursor:none}@media(max-width:768px){body{cursor:auto}}
+#cursor{position:fixed;width:10px;height:10px;background:var(--terra);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s,background .3s;mix-blend-mode:multiply}
+#cursor-ring{position:fixed;width:38px;height:38px;border:1px solid rgba(181,80,42,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+@media(max-width:768px){#cursor,#cursor-ring{display:none}}
+nav{position:fixed;top:0;left:0;right:0;padding:22px 48px;display:flex;justify-content:space-between;align-items:center;z-index:200;color:var(--cream);transition:all .5s}nav.scrolled{background:rgba(254,252,248,.96);backdrop-filter:blur(20px);padding:14px 48px;border-bottom:1px solid var(--line);color:var(--ink)}.nav-logo{font-family:"Playfair Display",serif;font-weight:500;font-size:21px;letter-spacing:-.02em;color:inherit;text-decoration:none;line-height:1}.nav-logo em{font-style:italic;font-weight:400;color:var(--sage-pale)}nav.scrolled .nav-logo em{color:var(--sage)}.nav-logo small{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.5;margin-top:3px}.nav-links{display:flex;align-items:center;gap:2px}.nav-link{padding:8px 14px;color:inherit;text-decoration:none;font-size:13px;border-radius:40px;transition:all .3s;opacity:.8;position:relative}.nav-link::after{content:"";position:absolute;bottom:4px;left:14px;right:14px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.4,0,.2,1)}.nav-link:hover{opacity:1}.nav-link:hover::after{transform:scaleX(1);transform-origin:left}.nav-cta{padding:10px 22px;border:1px solid rgba(253,250,244,.4);color:var(--cream);border-radius:40px;font-size:13px;text-decoration:none;transition:all .4s}nav.scrolled .nav-cta{border-color:var(--terra);color:var(--terra)}.nav-cta:hover{background:var(--terra)!important;border-color:var(--terra)!important;color:var(--cream)!important}@media(max-width:640px){.nav-link{display:none}nav,nav.scrolled{padding:14px 20px}}
+.lang-switch{position:relative;margin-right:4px}.lang-btn{background:transparent;border:1px solid rgba(253,250,244,.3);border-radius:40px;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:inherit;cursor:none;transition:all .3s;display:inline-flex;align-items:center;gap:6px;opacity:.65;font-family:inherit}nav.scrolled .lang-btn{border-color:var(--line)}.lang-btn:hover{opacity:1}.lang-btn .chev{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);transition:transform .3s;margin-top:-2px}.lang-switch.open .lang-btn .chev{transform:rotate(-135deg) translate(-1px,-1px);margin-top:2px}.lang-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--cream);color:var(--ink);border-radius:14px;padding:6px;min-width:164px;border:1px solid var(--line);box-shadow:0 12px 32px -8px rgba(28,24,18,.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s;z-index:300}.lang-switch.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}.lang-option{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;border-radius:9px;font-size:13px;color:var(--ink);cursor:none;text-align:left;transition:background .2s;font-family:inherit}.lang-option:hover{background:var(--beige)}.lang-option.active{background:var(--beige);color:var(--terra)}.lang-option .name{flex:1}.lang-option .check{width:14px;height:14px;opacity:0;color:var(--terra)}.lang-option.active .check{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:50px;font-size:14px;letter-spacing:.03em;text-decoration:none;transition:all .45s cubic-bezier(.2,.8,.2,1);border:none;cursor:none;font-family:inherit;white-space:nowrap;position:relative;overflow:hidden}.btn::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.1);transform:translateX(-110%);transition:transform .5s cubic-bezier(.4,0,.2,1)}.btn:hover::before{transform:translateX(0)}.btn-terra{background:var(--terra);color:var(--cream)}.btn-terra:hover{background:var(--terra-deep);transform:translateY(-2px);box-shadow:0 14px 36px -8px rgba(181,80,42,.45)}.btn-sage{background:var(--sage);color:var(--cream)}.btn-sage:hover{background:var(--sage-light);transform:translateY(-2px);box-shadow:0 14px 36px -8px rgba(107,127,98,.4)}.btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(253,250,244,.4)}.btn-ghost:hover{border-color:rgba(253,250,244,.8);background:rgba(253,250,244,.08)}.btn-dark{background:var(--ink);color:var(--cream)}.btn-dark:hover{background:var(--bark);transform:translateY(-1px);box-shadow:0 10px 28px -6px rgba(28,24,18,.4)}.btn .arr{transition:transform .4s}.btn:hover .arr{transform:translateX(5px)}
+.hero{height:100vh;min-height:680px;position:relative;overflow:hidden;color:var(--cream);display:flex;flex-direction:column}.hero-bg{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;object-position:center 35%;will-change:transform}.hero-veil{position:absolute;inset:0;background:linear-gradient(175deg,rgba(28,24,18,.05) 0%,rgba(28,24,18,.02) 30%,rgba(28,24,18,.72) 100%);z-index:1}.hero-scroll-line{position:absolute;bottom:0;left:48px;width:1px;height:72px;background:linear-gradient(to bottom,transparent,rgba(253,250,244,.45));z-index:3;animation:lineGrow 1.4s 1.4s both}@keyframes lineGrow{from{height:0;opacity:0}to{height:72px;opacity:1}}.hero-body{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 80px}.hero-loc{font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.65;margin-bottom:28px;display:flex;align-items:center;gap:12px;animation:rise .9s .3s both}.hero-loc::before{content:"";width:28px;height:1px;background:var(--sage-pale)}.hero h1{font-family:"Playfair Display",serif;font-size:clamp(64px,13vw,168px);font-weight:500;line-height:.88;letter-spacing:-.04em;margin-bottom:10px;animation:rise 1s .4s both}.hero h1 em{font-style:italic;font-weight:400;color:var(--sage-pale)}.hero-tagline{font-family:"Cormorant Garamond",serif;font-size:clamp(17px,3.5vw,32px);font-weight:300;font-style:italic;letter-spacing:.08em;opacity:.72;margin-bottom:28px;color:var(--sand);animation:rise 1s .5s both}.hero-desc{font-size:16px;max-width:500px;opacity:.88;margin-bottom:28px;line-height:1.7;animation:rise 1s .6s both}.hero-kite-strip{display:flex;gap:10px;margin-bottom:32px;animation:rise 1s .65s both;flex-wrap:wrap}.kite-pill{display:flex;align-items:center;gap:7px;background:rgba(253,250,244,.1);backdrop-filter:blur(12px);border:1px solid rgba(253,250,244,.18);padding:8px 16px;border-radius:40px;font-size:12px;letter-spacing:.04em;opacity:.9;transition:background .3s,border-color .3s}.kite-pill:hover{background:rgba(253,250,244,.18);border-color:rgba(253,250,244,.32)}.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;animation:rise 1s .7s both}.hero-scroll-ind{position:absolute;bottom:36px;right:48px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;animation:rise 1s 1.3s both}.hero-scroll-ind span{font-size:9px;letter-spacing:.25em;text-transform:uppercase;opacity:.45;writing-mode:vertical-rl}.scroll-dot{width:4px;height:4px;background:rgba(253,250,244,.5);border-radius:50%;animation:dotBounce 2s infinite}@keyframes dotBounce{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(9px);opacity:1}}@media(max-width:640px){.hero-body{padding:0 24px 56px}.hero-scroll-line{left:24px}.hero-scroll-ind{display:none}}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);margin-bottom:20px;font-weight:500;display:flex;align-items:center;gap:10px}.eyebrow::before{content:"";width:18px;height:1px;background:currentColor}.eyebrow.center{justify-content:center}.eyebrow.center::before{display:none}
+.prochaine-edition{background:var(--linen);padding:88px 48px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}.prochaine-edition::before{content:"OCTOBRE";position:absolute;right:-10px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:"Playfair Display",serif;font-size:clamp(100px,18vw,200px);font-weight:500;letter-spacing:-.04em;color:var(--sand);opacity:.28;pointer-events:none;white-space:nowrap;line-height:1}.pe-inner{max-width:1100px;margin:0 auto;position:relative}.pe-label{margin-bottom:36px}.pe-card{display:grid;grid-template-columns:1fr 1fr;gap:56px;background:var(--cream);border-radius:28px;padding:52px;border:1px solid var(--line);box-shadow:0 2px 32px -8px rgba(28,24,18,.06);transition:box-shadow .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}.pe-card:hover{box-shadow:0 20px 64px -20px rgba(28,24,18,.14);transform:translateY(-4px)}.pe-tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:16px;opacity:.8}.pe-title{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,64px);font-weight:500;line-height:.9;letter-spacing:-.03em;margin-bottom:20px}.pe-title em{font-style:italic;font-weight:400;color:var(--terra)}.pe-desc{font-size:15px;line-height:1.75;color:var(--bark);opacity:.82;margin-bottom:24px}.pe-kite-mention{font-size:13px;line-height:1.65;color:var(--bark);opacity:.58;padding:14px 18px;border-left:2px solid var(--sage-pale);background:rgba(107,127,98,.05);border-radius:0 10px 10px 0}.pe-card-right{display:flex;flex-direction:column;gap:28px;border-left:1px solid var(--line);padding-left:52px}.pe-dates-label{font-size:9px;letter-spacing:.24em;text-transform:uppercase;opacity:.4;margin-bottom:10px}.pe-dates-val{font-family:"Playfair Display",serif;font-size:50px;font-weight:400;line-height:.9;letter-spacing:-.03em}.pe-dates-val em{font-style:italic;color:var(--terra);display:block;font-size:21px;margin-top:10px;letter-spacing:.02em}.pe-meta-list{display:flex;flex-direction:column}.pe-meta-item{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.pe-meta-lbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.4}.pe-meta-val{font-size:14px;font-weight:500}@media(max-width:768px){.prochaine-edition{padding:56px 24px}.pe-card{grid-template-columns:1fr;gap:36px;padding:32px}.pe-card-right{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:32px}}
+.manifesto{padding:120px 48px;background:var(--warm-white);position:relative;overflow:hidden}.manifesto-inner{max-width:1100px;margin:0 auto}.manifesto-text{font-family:"Playfair Display",serif;font-size:clamp(28px,4.5vw,58px);font-weight:400;line-height:1.1;letter-spacing:-.025em;max-width:20ch}.manifesto-text em{font-style:italic;color:var(--terra)}.word-wrap{display:inline-block;overflow:hidden;vertical-align:top;line-height:1.25}.word-inner{display:inline-block;transform:translateY(105%);transition:transform .9s cubic-bezier(.16,1,.3,1)}.word-wrap.in .word-inner{transform:translateY(0)}.manifesto-cols{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:72px;padding-top:56px;border-top:1px solid var(--line)}.manifesto-col{position:relative;padding-top:24px}.manifesto-col::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--terra);transition:width 1.2s cubic-bezier(.4,0,.2,1) .15s}.manifesto-col.in::before{width:44px}.manifesto-col h4{font-family:"Playfair Display",serif;font-size:19px;font-weight:500;margin-bottom:12px;letter-spacing:-.01em}.manifesto-col p{font-size:15px;line-height:1.85;color:var(--bark);opacity:.78}@media(max-width:768px){.manifesto{padding:80px 24px}.manifesto-cols{grid-template-columns:1fr;gap:32px}}
+.offres-section{background:var(--linen);padding:0 48px 100px}.offres-head{padding:80px 0 56px;text-align:center}.offres-head h2{font-family:"Playfair Display",serif;font-size:clamp(34px,6vw,72px);font-weight:400;line-height:.95;letter-spacing:-.03em;margin-top:14px}.offres-head h2 em{font-style:italic;color:var(--terra)}.offres-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}.offre{border-radius:24px;overflow:hidden;position:relative;cursor:none;min-height:600px;transition:transform .7s cubic-bezier(.2,.8,.2,1),box-shadow .7s;border:1px solid var(--line)}.offre:hover{transform:translateY(-10px);box-shadow:0 40px 90px -30px rgba(28,24,18,.28)}.offre-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}.offre:hover .offre-img{transform:scale(1.07)}.offre-veil{position:absolute;inset:0;z-index:1}.offre.summit .offre-veil{background:linear-gradient(155deg,rgba(28,24,18,.04) 0%,rgba(28,24,18,.82) 100%)}.offre.escape .offre-veil{background:linear-gradient(155deg,rgba(107,127,98,.08) 0%,rgba(28,24,18,.8) 100%)}.offre-body{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:40px;color:var(--cream)}.offre-chip{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:50px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:18px;align-self:flex-start;transition:transform .4s}.offre:hover .offre-chip{transform:translateY(-3px)}.offre.summit .offre-chip{background:rgba(107,127,98,.25);color:var(--sage-pale);border:1px solid rgba(107,127,98,.4)}.offre.escape .offre-chip{background:rgba(181,80,42,.22);color:#f0c4a8;border:1px solid rgba(181,80,42,.35)}.offre-chip::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}.offre h2{font-family:"Playfair Display",serif;font-size:clamp(40px,6vw,74px);font-weight:500;line-height:.88;letter-spacing:-.04em;margin-bottom:14px;transition:transform .4s}.offre:hover h2{transform:translateY(-4px)}.offre.summit h2 em{font-style:italic;font-weight:400;color:var(--sage-pale)}.offre.escape h2 em{font-style:italic;font-weight:400;color:#f0c4a8}.offre-desc{font-size:14px;line-height:1.65;opacity:.78;max-width:340px;margin-bottom:24px}.offre-meta{display:flex;gap:20px;padding-top:18px;border-top:1px solid rgba(253,250,244,.15);margin-bottom:24px;flex-wrap:wrap}.meta-lbl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;opacity:.5;margin-bottom:3px}.meta-val{font-family:"Playfair Display",serif;font-size:15px;font-weight:500;letter-spacing:-.01em}.meta-val em{font-style:italic;font-weight:400}@media(max-width:900px){.offres-section{padding:0 20px 80px}.offres-grid{grid-template-columns:1fr;gap:16px}.offre{min-height:520px;cursor:auto}}
+.contact-section{background:var(--beige);padding:100px 48px;position:relative;overflow:hidden}.contact-section::after{content:"";position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(181,80,42,.07) 0%,transparent 65%);pointer-events:none}.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;position:relative}.contact-text h2{font-family:"Playfair Display",serif;font-size:clamp(32px,5vw,58px);font-weight:400;line-height:1;letter-spacing:-.03em;margin-top:14px}.contact-text h2 em{font-style:italic;color:var(--terra)}.contact-text p{font-size:15px;line-height:1.75;color:var(--bark);opacity:.8;margin-top:18px}.contact-infos{display:flex;flex-direction:column;gap:14px;margin-top:32px}.ci{display:flex;align-items:center;gap:12px;font-size:14px;opacity:.7;transition:opacity .3s}.ci:hover{opacity:1}.ci-icon{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s}.ci:hover .ci-icon{transform:scale(1.12)}.contact-form{background:var(--cream);border-radius:28px;padding:40px;border:1px solid var(--line);box-shadow:0 4px 40px -12px rgba(28,24,18,.07)}.form{display:flex;flex-direction:column;gap:20px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;opacity:.45;font-weight:500;transition:opacity .3s,color .3s}.field:focus-within label{opacity:1;color:var(--terra)}.field input,.field select,.field textarea{background:transparent;border:none;border-bottom:1px solid var(--line);padding:10px 0;color:var(--ink);font-family:inherit;font-size:15px;transition:border-color .3s;cursor:none}.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--terra)}.field textarea{resize:vertical;min-height:72px;cursor:auto}.field select{appearance:none;cursor:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231c1812' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;padding-right:24px}.form-submit .btn{width:100%;justify-content:center}.form-legal{font-size:11px;opacity:.38;text-align:center;line-height:1.6}@media(max-width:768px){.contact-section{padding:64px 24px}.contact-inner{grid-template-columns:1fr;gap:36px}.form-row{grid-template-columns:1fr}}
+footer{background:var(--ink);color:var(--cream);padding:56px 48px;border-top:1px solid rgba(253,250,244,.07)}.footer-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}.footer-logo{font-family:"Playfair Display",serif;font-size:19px;font-weight:500;letter-spacing:-.02em;text-decoration:none;color:var(--cream);transition:opacity .3s}.footer-logo:hover{opacity:.65}.footer-logo em{font-style:italic;color:var(--sage-light)}.footer-links{display:flex;gap:24px;flex-wrap:wrap}.footer-links a{font-size:12px;opacity:.38;color:var(--cream);text-decoration:none;letter-spacing:.04em;transition:opacity .3s}.footer-links a:hover{opacity:.85}.footer-copy{font-size:11px;opacity:.25;letter-spacing:.04em}@media(max-width:640px){footer{padding:36px 24px}.footer-inner{flex-direction:column;align-items:flex-start;gap:18px}}
+.sticky-cta{position:fixed;bottom:16px;left:16px;right:16px;z-index:90;background:rgba(28,24,18,.95);backdrop-filter:blur(16px);color:var(--cream);padding:14px 18px 14px 22px;border-radius:50px;display:flex;justify-content:space-between;align-items:center;text-decoration:none;font-size:13px;border:1px solid rgba(253,250,244,.1);transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}.sticky-cta.show{transform:translateY(0)}.sticky-cta b{display:block;font-weight:500}.sticky-cta small{display:block;font-size:10px;opacity:.5;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}.sticky-cta-btn{background:var(--terra);color:var(--cream);padding:9px 20px;border-radius:40px;font-size:12px;white-space:nowrap;transition:background .3s}.sticky-cta:hover .sticky-cta-btn{background:var(--terra-deep)}@media(min-width:768px){.sticky-cta{display:none}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .95s cubic-bezier(.16,1,.3,1),transform .95s cubic-bezier(.16,1,.3,1)}.reveal.in{opacity:1;transform:translateY(0)}.reveal-left{opacity:0;transform:translateX(-36px);transition:opacity .95s cubic-bezier(.16,1,.3,1),transform .95s cubic-bezier(.16,1,.3,1)}.reveal-left.in{opacity:1;transform:translateX(0)}.reveal-scale{opacity:0;transform:scale(.93);transition:opacity .95s cubic-bezier(.16,1,.3,1),transform .95s cubic-bezier(.16,1,.3,1)}.reveal-scale.in{opacity:1;transform:scale(1)}.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}.d4{transition-delay:.46s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Let's <em>Flow</em><small>Préa · Jericoacoara · Brésil</small></a>
+  <div class="nav-links">
+    <a href="#offres" class="nav-link">Nos offres</a>
+    <a href="lieu.html" class="nav-link">Le lieu</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" type="button" onclick="toggleLang(event)"><span id="langCurrent">FR</span><span class="chev"></span></button>
+      <div class="lang-menu">
+        <button class="lang-option active" data-lang="fr" onclick="setLang('fr',event)"><span>🇫🇷</span><span class="name">Français</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en',event)"><span>🇬🇧</span><span class="name">English</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="pt" onclick="setLang('pt',event)"><span>🇧🇷</span><span class="name">Português</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="es" onclick="setLang('es',event)"><span>🇪🇸</span><span class="name">Español</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+    </div>
+    <a href="#contact" class="nav-cta">Nous contacter</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <img class="hero-bg" id="heroBg"
+    src="https://drive.google.com/thumbnail?id=1QrE_MNB7Yt8bsxF-8SGQ2kUQyyEdzJ4B&sz=w1600"
+    onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=17sPn06HpFHpsFjS6-yXe2Uh8yldQfSBj&sz=w1600'"
+    alt="Kitesurf à Préa, Brésil — Let's Flow">
+  <div class="hero-veil"></div>
+  <div class="hero-scroll-line"></div>
+  <div class="hero-body">
+    <div class="hero-loc">Préa · Jericoacoara · Brésil</div>
+    <h1>Let's<br><em>Flow.</em></h1>
+    <div class="hero-tagline">Séminaires d'exception, océan en toile de fond</div>
+    <p class="hero-desc">Des séminaires professionnels pour les experts de leur domaine, et des retraites bien-être pour ceux qui cherchent à se ressourcer — dans l'un des endroits les plus beaux du monde.</p>
+    <div class="hero-kite-strip">
+      <div class="kite-pill">🏥 Événements pro · Médecine & santé</div>
+      <div class="kite-pill">🌿 Retraites bien-être · Wave Escape</div>
+      <div class="kite-pill">🪁 Kitesurf · Préa, Brésil</div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#offres" class="btn btn-terra">Découvrir nos offres <span class="arr">→</span></a>
+      <a href="#contact" class="btn btn-ghost">Organiser un événement sur mesure</a>
+    </div>
+  </div>
+  <div class="hero-scroll-ind">
+    <span>Scroll</span>
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<section class="prochaine-edition" id="prochaine-edition">
+  <div class="pe-inner">
+    <div class="pe-label reveal"><div class="eyebrow">— Prochaine édition</div></div>
+    <div class="pe-card reveal-scale d1">
+      <div class="pe-card-left">
+        <div class="pe-tag">Wave Summit · Santé professionnelle</div>
+        <h2 class="pe-title">Wave of<br><em>Implantology</em></h2>
+        <p class="pe-desc">Séminaire de référence en implantologie — conférences scientifiques, FMC, networking entre praticiens, dans un cadre unique entre océan et kitesurf.</p>
+        <div class="pe-kite-mention">🪁 Le kitesurf fait partie de l'expérience — une façon de couper le fil, créer des liens, et repartir transformé.</div>
+      </div>
+      <div class="pe-card-right">
+        <div>
+          <div class="pe-dates-label">Dates</div>
+          <div class="pe-dates-val">26 — 30<br><em>Octobre 2026</em></div>
+        </div>
+        <div class="pe-meta-list">
+          <div class="pe-meta-item"><span class="pe-meta-lbl">Lieu</span><span class="pe-meta-val">Préa, Brésil</span></div>
+          <div class="pe-meta-item"><span class="pe-meta-lbl">Format</span><span class="pe-meta-val">5 jours · immersif</span></div>
+          <div class="pe-meta-item"><span class="pe-meta-lbl">Public</span><span class="pe-meta-val">Chirurgiens & implantologistes</span></div>
+        </div>
+        <a href="wavessummit.html" class="btn btn-terra">Voir le programme <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto" id="manifesto">
+  <div class="manifesto-inner">
+    <div class="eyebrow reveal">— Notre vision</div>
+    <h2 class="manifesto-text" id="manifestoText">Des expériences qui <em>dépassent</em> le cadre du séminaire traditionnel.</h2>
+    <div class="manifesto-cols">
+      <div class="manifesto-col reveal d1">
+        <h4>Événements professionnels d'exception</h4>
+        <p>Nous concevons des séminaires pour les experts de leur domaine : conférenciers de référence, programme rigoureux, échanges entre pairs — dans un lieu qui inspire et libère la pensée.</p>
+      </div>
+      <div class="manifesto-col reveal d2">
+        <h4>Retraites pour se ressourcer</h4>
+        <p>Pour ceux qui ont besoin de décrocher vraiment. Nos Wave Escape offrent un espace de déconnexion totale : océan, bien-être, pleine conscience — et un cadre brésilien comme nulle part ailleurs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offres-section" id="offres">
+  <div class="offres-head">
+    <div class="eyebrow center reveal">— Deux univers</div>
+    <h2 class="reveal d1">Choisissez votre <em>vague.</em></h2>
+  </div>
+  <div class="offres-grid">
+    <div class="offre summit reveal">
+      <img class="offre-img" src="https://drive.google.com/thumbnail?id=17sPn06HpFHpsFjS6-yXe2Uh8yldQfSBj&sz=w900" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1LIndC_NlP6GKvf_POjjRhjPOIBjkNgoM&sz=w900'" alt="Wave Summit" loading="lazy">
+      <div class="offre-veil"></div>
+      <div class="offre-body">
+        <div class="offre-chip">Santé · Médecine · Profession</div>
+        <h2>Wave<br><em>Summit.</em></h2>
+        <p class="offre-desc">Séminaires médicaux et professionnels de haut niveau — conférences, FMC, networking — entre océan et kitesurf.</p>
+        <div class="offre-meta">
+          <div><div class="meta-lbl">Format</div><div class="meta-val">5 jours · <em>immersif</em></div></div>
+          <div><div class="meta-lbl">Activité</div><div class="meta-val"><em>Kitesurf</em> & océan</div></div>
+          <div><div class="meta-lbl">Lieu</div><div class="meta-val">Préa, <em>Brésil</em></div></div>
+        </div>
+        <a href="wavessummit.html" class="btn btn-sage">Voir Wave Summit <span class="arr">→</span></a>
+      </div>
+    </div>
+    <div class="offre escape reveal d2">
+      <img class="offre-img" src="https://drive.google.com/thumbnail?id=1yuxwkU5KfZfKBujnp4KS_YrD8zeENRmN&sz=w900" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1Ne_2HJIjMP6fPgwWxSQu8albgJLgkx2_&sz=w900'" alt="Wave Escape" loading="lazy">
+      <div class="offre-veil"></div>
+      <div class="offre-body">
+        <div class="offre-chip">Bien-être · Déconnexion · Reset</div>
+        <h2>Wave<br><em>Escape.</em></h2>
+        <p class="offre-desc">Retraites de déconnexion pour équipes et dirigeants. Yoga, kitesurf, pleine conscience — et un silence que vous n'avez pas entendu depuis longtemps.</p>
+        <div class="offre-meta">
+          <div><div class="meta-lbl">Format</div><div class="meta-val">3–7 jours · <em>sur mesure</em></div></div>
+          <div><div class="meta-lbl">Activité</div><div class="meta-val"><em>Flow</em> total</div></div>
+          <div><div class="meta-lbl">Lieu</div><div class="meta-val">Préa, <em>Brésil</em></div></div>
+        </div>
+        <a href="#contact" class="btn btn-terra">En savoir plus <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-text reveal-left">
+      <div class="eyebrow">— Parlons-en</div>
+      <h2>Votre projet,<br><em>notre flow.</em></h2>
+      <p>Que vous souhaitiez rejoindre une édition existante ou créer votre propre séminaire sur mesure, écrivez-nous — nous répondons sous 48h.</p>
+      <div class="contact-infos">
+        <div class="ci"><span class="ci-icon" style="background:var(--terra)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span>WhatsApp Business disponible</div>
+        <div class="ci"><span class="ci-icon" style="background:var(--sage)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>contact@letsflow.com</div>
+        <div class="ci"><span class="ci-icon" style="background:var(--gold)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Réponse garantie sous 48h</div>
+      </div>
+    </div>
+    <div class="contact-form reveal d2">
+      <form class="form" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="field"><label>Prénom</label><input type="text" placeholder="Jean" required></div>
+          <div class="field"><label>Nom</label><input type="text" placeholder="Dupont" required></div>
+        </div>
+        <div class="field"><label>Email professionnel</label><input type="email" placeholder="jean@clinique.fr" required></div>
+        <div class="field">
+          <label>Votre besoin</label>
+          <select required>
+            <option value="">Sélectionner…</option>
+            <option>Rejoindre Wave Summit (santé pro)</option>
+            <option>Rejoindre Wave Escape (bien-être)</option>
+            <option>Organiser un séminaire sur mesure</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="field"><label>Message</label><textarea placeholder="Décrivez votre projet, dates idéales, nombre de participants…" rows="3"></textarea></div>
+        <div class="form-submit"><button type="submit" class="btn btn-dark">Envoyer ma demande <span class="arr">→</span></button></div>
+        <p class="form-legal">En soumettant ce formulaire, vous acceptez notre politique de confidentialité.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Let's <em>Flow</em></a>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a><a href="#">CGV</a><a href="#">Politique de confidentialité</a><a href="lieu.html">Le lieu</a><a href="mailto:contact@letsflow.com">contact@letsflow.com</a>
+    </div>
+    <div class="footer-copy">© 2026 Let's Flow · Préa, Brésil</div>
+  </div>
+</footer>
+
+<a href="#prochaine-edition" class="sticky-cta" id="stickyCta">
+  <div><small>26–30 Oct. 2026 · Préa, Brésil</small><b>Wave of Implantology</b></div>
+  <span class="sticky-cta-btn">Voir →</span>
+</a>
+
+<script>
+// CUSTOM CURSOR
+const cur = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+},{passive:true});
+(function animRing(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='40px';cur.style.height='40px';cur.style.background='rgba(181,80,42,.15)';ring.style.width='0';ring.style.height='0';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';cur.style.background='var(--terra)';ring.style.width='38px';ring.style.height='38px';});
+});
+
+// PARALLAX HERO
+const heroBg=document.getElementById('heroBg');
+let ticking=false;
+window.addEventListener('scroll',()=>{
+  if(!ticking){requestAnimationFrame(()=>{
+    const y=window.scrollY;
+    document.getElementById('nav').classList.toggle('scrolled',y>60);
+    document.getElementById('stickyCta').classList.toggle('show',y>window.innerHeight*.75);
+    if(heroBg&&y<window.innerHeight) heroBg.style.transform=`translateY(${y*.32}px) scale(1.08)`;
+    ticking=false;
+  });ticking=true;}
+},{passive:true});
+
+// REVEAL OBSERVER
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+},{threshold:0.08,rootMargin:'0px 0px -4% 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-scale,.manifesto-col').forEach(el=>io.observe(el));
+
+// MANIFESTO WORD-BY-WORD REVEAL
+(function(){
+  const el=document.getElementById('manifestoText');
+  if(!el) return;
+  // Split preserving HTML tags
+  const raw=el.innerHTML;
+  let out='',delay=0,inTag=false,buf='',tagBuf='';
+  for(let i=0;i<raw.length;i++){
+    const c=raw[i];
+    if(c==='<'){inTag=true;if(buf.trim()){buf.split(/(\s+)/).forEach(p=>{if(/\S/.test(p)){out+=`<span class="word-wrap" style="transition-delay:${delay.toFixed(2)}s"><span class="word-inner">${p}</span></span>`;delay+=0.045;}else{out+=p;}});buf='';}tagBuf=c;}
+    else if(c==='>'){inTag=false;out+=tagBuf+c;tagBuf='';}
+    else if(inTag){tagBuf+=c;}
+    else{buf+=c;}
+  }
+  if(buf.trim()){buf.split(/(\s+)/).forEach(p=>{if(/\S/.test(p)){out+=`<span class="word-wrap" style="transition-delay:${delay.toFixed(2)}s"><span class="word-inner">${p}</span></span>`;delay+=0.045;}else{out+=p;}});}
+  el.innerHTML=out;
+  const wio=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{if(en.isIntersecting){el.querySelectorAll('.word-wrap').forEach(w=>w.classList.add('in'));wio.unobserve(en.target);}});
+  },{threshold:0.25});
+  wio.observe(el);
+})();
+
+// LANG
+function toggleLang(e){e.stopPropagation();document.getElementById('langSwitch').classList.toggle('open');}
+document.addEventListener('click',()=>document.getElementById('langSwitch')?.classList.remove('open'));
+function setLang(lang,e){if(e)e.stopPropagation();document.getElementById('langCurrent').textContent=lang.toUpperCase();document.querySelectorAll('.lang-option').forEach(o=>o.classList.toggle('active',o.dataset.lang===lang));document.getElementById('langSwitch').classList.remove('open');}
+
+// FORM
+function handleForm(e){e.preventDefault();const btn=e.target.querySelector('button[type=submit]');btn.textContent='Message envoyé ✓';btn.style.background='#6b7f62';btn.disabled=true;setTimeout(()=>{btn.textContent='Envoyer ma demande →';btn.style.background='';btn.disabled=false;e.target.reset();},4000);}
+</script>
+</body>
+</html>
