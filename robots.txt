@@ -1,0 +1,31 @@
+# robots.txt — Let's Flow
+# Site officiel : https://letsflow.com
+
+User-agent: *
+Allow: /
+Disallow: /pousser-sur-github.bat
+
+# Bots IA — autorisés explicitement (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap
+Sitemap: https://letsflow.com/sitemap.xml
