@@ -90,7 +90,7 @@
         {
           "@type": "Question",
           "name": "Y a-t-il des choses à faire à part le kitesurf ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Oui, beaucoup : balades en buggy dans les dunes, visite de la lagune Paraíso, traversée de la dune du Pôr do Sol au coucher du soleil, snorkeling, paddle, yoga, marchés locaux, restaurants au bord de l'eau, et simplement profiter du rythme tranquille du village."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, beaucoup : balades en buggy dans les dunes, visite de la lagune Paraíso, traversée de la dune du Pôr do Sol au coucher du soleil, paddle, yoga, marchés locaux, restaurants au bord de l'eau, et simplement profiter du rythme tranquille du village."}
         }
       ]
     }
@@ -161,21 +161,31 @@ nav.scrolled{background:#221a17;padding:14px 48px;border-bottom:1px solid rgba(2
 
 /* ==================== INTRO / SITUATION ==================== */
 .lieu-intro{padding:120px 48px;background:var(--warm-white)}
-.lieu-intro-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.lieu-intro-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center}
 .lieu-intro-text h2{font-family:"Playfair Display",serif;font-size:clamp(34px,5vw,58px);font-weight:400;line-height:1.02;letter-spacing:-.025em;margin-top:14px;color:var(--ink)}
 .lieu-intro-text h2 em{font-style:italic;color:var(--terra)}
 .lieu-intro-text p{font-size:17px;line-height:1.85;color:var(--bark);opacity:.88;margin-top:24px;max-width:54ch}
-.lieu-map{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:1/1;background:linear-gradient(155deg,var(--sage-pale) 0%,#dcecef 100%);padding:40px;display:flex;flex-direction:column;justify-content:space-between;color:var(--ink);box-shadow:0 30px 80px -28px rgba(28,24,18,.2)}
-.lieu-map::before{content:"";position:absolute;bottom:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle,rgba(184,90,48,.15) 0%,transparent 65%);border-radius:50%}
-.lieu-map-pin{position:relative;z-index:2}
-.lieu-map-pin .label{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:10px}
-.lieu-map-pin .place{font-family:"Playfair Display",serif;font-size:42px;font-weight:500;letter-spacing:-.02em;line-height:1}
-.lieu-map-pin .place em{font-style:italic;font-weight:400;color:var(--terra-deep)}
-.lieu-map-coords{position:relative;z-index:2;font-size:12px;letter-spacing:.05em;color:var(--bark);opacity:.7;font-family:"Playfair Display",serif;font-style:italic}
-.lieu-map-route{position:relative;z-index:2;display:flex;flex-direction:column;gap:14px;font-size:13px}
-.lieu-map-route .step{display:flex;align-items:center;gap:12px;color:var(--ink)}
-.lieu-map-route .step-num{width:24px;height:24px;border-radius:50%;background:var(--terra);color:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:11px;flex-shrink:0;font-family:"DM Sans",sans-serif}
-@media(max-width:900px){.lieu-intro{padding:72px 24px}.lieu-intro-inner{grid-template-columns:1fr;gap:40px}.lieu-map{aspect-ratio:auto;min-height:340px}}
+
+/* Google Maps embed */
+.lieu-map-wrap{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 80px -28px rgba(28,24,18,.25);border:1px solid var(--line)}
+.lieu-map-wrap iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.95)}
+.lieu-map-coords{display:block;text-align:center;font-size:12px;letter-spacing:.06em;color:var(--bark);opacity:.65;font-family:"Playfair Display",serif;font-style:italic;margin-top:14px}
+.lieu-map-coords a{color:var(--terra);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
+.lieu-map-coords a:hover{border-bottom-color:var(--terra)}
+
+/* Voyage en 3 étapes (sous le 2-col) */
+.lieu-route{max-width:1200px;margin:64px auto 0;padding-top:48px;border-top:1px solid var(--line)}
+.lieu-route-head{text-align:center;margin-bottom:36px}
+.lieu-route-head .label{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:10px;display:block}
+.lieu-route-head h3{font-family:"Playfair Display",serif;font-size:clamp(22px,3vw,30px);font-weight:400;color:var(--ink);letter-spacing:-.015em}
+.lieu-route-head h3 em{font-style:italic;color:var(--terra)}
+.lieu-route-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;align-items:start;position:relative}
+.lieu-route-steps::before{content:"";position:absolute;top:32px;left:16.5%;right:16.5%;height:2px;background:repeating-linear-gradient(90deg,var(--terra) 0 8px,transparent 8px 16px);z-index:0}
+.lieu-route-step{position:relative;z-index:1;text-align:center;padding:0 16px}
+.lieu-route-step .step-num{width:64px;height:64px;border-radius:50%;background:var(--cream);border:2px solid var(--terra);color:var(--terra);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-style:italic;font-weight:500;font-size:24px;margin:0 auto 16px;box-shadow:0 6px 18px -8px rgba(184,90,48,.3)}
+.lieu-route-step h4{font-family:"Playfair Display",serif;font-size:17px;font-weight:500;color:var(--ink);margin-bottom:6px;letter-spacing:-.005em}
+.lieu-route-step p{font-size:13px;line-height:1.55;color:var(--bark);opacity:.78}
+@media(max-width:900px){.lieu-intro{padding:72px 24px}.lieu-intro-inner{grid-template-columns:1fr;gap:40px}.lieu-map-wrap{aspect-ratio:4/3}.lieu-route-steps{grid-template-columns:1fr;gap:24px}.lieu-route-steps::before{display:none}}
 
 /* ==================== POURQUOI PRÉA ==================== */
 .pourquoi{padding:120px 48px;background:linear-gradient(170deg,#eaf3f5 0%,#dcecef 50%,#c8dfe5 100%);position:relative;overflow:hidden}
@@ -203,12 +213,10 @@ nav.scrolled{background:#221a17;padding:14px 48px;border-bottom:1px solid rgba(2
 .dormir-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .dormir-card{position:relative;border-radius:22px;overflow:hidden;background:var(--cream);border:1px solid var(--line);min-height:480px;display:flex;flex-direction:column;justify-content:flex-end;color:var(--cream);transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .6s}
 .dormir-card:hover{transform:translateY(-8px);box-shadow:0 35px 80px -28px rgba(28,24,18,.32)}
-.dormir-card-bg{position:absolute;inset:0;z-index:0}
-.dormir-card.villa .dormir-card-bg{background:linear-gradient(160deg,#3d2f1e 0%,#5a3d28 100%)}
-.dormir-card.bungalow .dormir-card-bg{background:linear-gradient(160deg,#6b7f62 0%,#3a4a32 100%)}
-.dormir-card.pousada .dormir-card-bg{background:linear-gradient(160deg,#b85a30 0%,#8e3f1d 100%)}
-.dormir-card-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.45) 100%)}
-.dormir-card-body{position:relative;z-index:1;padding:36px 32px}
+.dormir-card-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.dormir-card:hover .dormir-card-bg{transform:scale(1.06)}
+.dormir-card-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 35%,rgba(28,18,12,.35) 65%,rgba(20,14,10,.78) 100%);pointer-events:none}
+.dormir-card-body{position:relative;z-index:2;padding:36px 32px}
 .dormir-card-tag{display:inline-block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;background:rgba(253,250,244,.18);backdrop-filter:blur(6px);border:1px solid rgba(253,250,244,.3);padding:6px 12px;border-radius:50px;margin-bottom:22px}
 .dormir-card h3{font-family:"Playfair Display",serif;font-size:32px;font-weight:500;letter-spacing:-.015em;line-height:1;margin-bottom:14px}
 .dormir-card h3 em{font-style:italic;font-weight:400;color:#f5d99c}
@@ -233,24 +241,26 @@ nav.scrolled{background:#221a17;padding:14px 48px;border-bottom:1px solid rgba(2
 @media(max-width:900px){.vie{padding:72px 24px}.vie-inner{grid-template-columns:1fr;gap:40px}.vie-image{aspect-ratio:4/3;max-width:520px;margin:0 auto;order:-1}}
 
 /* ==================== QUAND VENIR ==================== */
-.saisons{padding:130px 48px;background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.saisons{padding:130px 48px;background:linear-gradient(170deg,var(--terra-pale) 0%,#fdeede 50%,var(--linen) 100%);color:var(--ink);position:relative;overflow:hidden}
 .saisons::before{content:"";position:absolute;top:-200px;left:-200px;width:560px;height:560px;background:radial-gradient(circle,rgba(184,90,48,.18) 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.saisons::after{content:"";position:absolute;bottom:-180px;right:-180px;width:480px;height:480px;background:radial-gradient(circle,rgba(107,127,98,.14) 0%,transparent 65%);border-radius:50%;pointer-events:none}
 .saisons-inner{max-width:1200px;margin:0 auto;position:relative}
 .saisons-head{text-align:center;margin-bottom:64px;max-width:680px;margin-left:auto;margin-right:auto}
-.saisons-head .eyebrow{color:#f5d99c;justify-content:center;display:flex}
+.saisons-head .eyebrow{color:var(--terra);justify-content:center;display:flex}
 .saisons-head .eyebrow::before{display:none}
-.saisons-head h2{font-family:"Playfair Display",serif;font-size:clamp(32px,5vw,56px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-top:14px;color:var(--cream)}
-.saisons-head h2 em{font-style:italic;color:#f5d99c}
-.saisons-head p{font-size:16px;line-height:1.7;color:rgba(253,250,244,.78);margin-top:18px}
+.saisons-head h2{font-family:"Playfair Display",serif;font-size:clamp(32px,5vw,56px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-top:14px;color:var(--ink)}
+.saisons-head h2 em{font-style:italic;color:var(--terra)}
+.saisons-head p{font-size:16px;line-height:1.7;color:var(--bark);opacity:.85;margin-top:18px}
 .saisons-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.saison-block{padding:30px 24px;border-radius:18px;background:rgba(253,250,244,.06);border:1px solid rgba(253,250,244,.1);transition:background .4s,transform .4s}
-.saison-block:hover{background:rgba(253,250,244,.1);transform:translateY(-4px)}
-.saison-block.is-best{background:rgba(184,90,48,.16);border-color:rgba(184,90,48,.35)}
-.saison-block .months{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#f5d99c;font-weight:600;margin-bottom:14px}
-.saison-block h3{font-family:"Playfair Display",serif;font-size:22px;font-weight:500;color:var(--cream);margin-bottom:10px;letter-spacing:-.005em}
-.saison-block h3 em{font-style:italic;color:#f5d99c}
-.saison-block .conditions{font-size:13px;line-height:1.65;color:rgba(253,250,244,.78);margin-bottom:14px}
-.saison-block .badge{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#f5d99c;padding:4px 10px;background:rgba(245,217,156,.12);border:1px solid rgba(245,217,156,.25);border-radius:30px}
+.saison-block{padding:30px 24px;border-radius:18px;background:rgba(254,252,248,.7);backdrop-filter:blur(6px);border:1px solid rgba(28,24,18,.08);transition:background .4s,transform .4s,box-shadow .4s}
+.saison-block:hover{background:rgba(254,252,248,.95);transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(28,24,18,.18)}
+.saison-block.is-best{background:rgba(184,90,48,.1);border-color:rgba(184,90,48,.25)}
+.saison-block.is-best:hover{background:rgba(184,90,48,.16)}
+.saison-block .months{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:14px}
+.saison-block h3{font-family:"Playfair Display",serif;font-size:22px;font-weight:500;color:var(--ink);margin-bottom:10px;letter-spacing:-.005em}
+.saison-block h3 em{font-style:italic;color:var(--terra)}
+.saison-block .conditions{font-size:13px;line-height:1.65;color:var(--bark);opacity:.85;margin-bottom:14px}
+.saison-block .badge{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--terra-deep);padding:4px 10px;background:rgba(184,90,48,.12);border:1px solid rgba(184,90,48,.25);border-radius:30px}
 @media(max-width:900px){.saisons{padding:72px 24px}.saisons-timeline{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.saisons-timeline{grid-template-columns:1fr}}
 
@@ -342,17 +352,43 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
       <p>Les conditions climatiques exceptionnelles — vent constant, eau chaude, soleil 300 jours par an — en font une destination de choix pour les sports nautiques, mais surtout un lieu où le rythme ralentit naturellement. Pas de route bétonnée. Pas de feux rouges. Juste le sable, les chevaux qui passent, et le bruit du vent.</p>
     </div>
 
-    <div class="lieu-map" aria-label="Comment se rendre à Préa">
-      <div class="lieu-map-pin">
-        <div class="label">Destination</div>
-        <div class="place">Pré<em>a</em></div>
+    <div>
+      <div class="lieu-map-wrap" aria-label="Carte Google Maps de Préa, Brésil">
+        <iframe
+          src="https://www.google.com/maps?q=Pr%C3%A9a%2C+Jericoacoara%2C+Cear%C3%A1%2C+Brazil&hl=fr&z=10&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Préa, Jericoacoara, Brésil — Google Maps"></iframe>
       </div>
-      <div class="lieu-map-route">
-        <div class="step"><div class="step-num">1</div><div>Vol Paris → Fortaleza</div></div>
-        <div class="step"><div class="step-num">2</div><div>Transfert privé en 4×4</div></div>
-        <div class="step"><div class="step-num">3</div><div>Préa, 4h30 plus tard</div></div>
+      <div class="lieu-map-coords">
+        2°49'00"S — 40°31'00"O · Ceará, Brésil ·
+        <a href="https://www.google.com/maps/place/Pr%C3%A9a,+Cruz+-+CE,+Br%C3%A9sil/" target="_blank" rel="noopener">Ouvrir dans Google Maps ↗</a>
       </div>
-      <div class="lieu-map-coords">2°49'00"S — 40°31'00"O · Ceará, Brésil</div>
+    </div>
+  </div>
+
+  <!-- 3 étapes du voyage -->
+  <div class="lieu-route">
+    <div class="lieu-route-head">
+      <span class="label">Le voyage</span>
+      <h3>De Paris à Préa <em>en 3 étapes</em></h3>
+    </div>
+    <div class="lieu-route-steps">
+      <div class="lieu-route-step">
+        <div class="step-num">1</div>
+        <h4>Vol vers Fortaleza</h4>
+        <p>Vol international depuis Paris (escale Lisbonne, Madrid ou São Paulo selon la compagnie). Air France, TAP, Latam.</p>
+      </div>
+      <div class="lieu-route-step">
+        <div class="step-num">2</div>
+        <h4>Transfert privé en 4×4</h4>
+        <p>On t'accueille à l'aéroport de Fortaleza pour un transfert privé à travers dunes et lagunes.</p>
+      </div>
+      <div class="lieu-route-step">
+        <div class="step-num">3</div>
+        <h4>Préa, 4h30 plus tard</h4>
+        <p>Tu poses tes valises dans ton hébergement. La déconnexion peut commencer.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -401,7 +437,8 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
 
     <div class="dormir-grid">
       <article class="dormir-card villa">
-        <div class="dormir-card-bg"></div>
+        <img class="dormir-card-bg" src="images/Villa-privee.jpg" alt="Villa privée à Préa avec piscine — Let's Flow" loading="lazy">
+        <div class="dormir-card-veil"></div>
         <div class="dormir-card-body">
           <span class="dormir-card-tag">Le confort total</span>
           <h3>Villa <em>privée</em></h3>
@@ -410,7 +447,8 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
       </article>
 
       <article class="dormir-card bungalow">
-        <div class="dormir-card-bg"></div>
+        <img class="dormir-card-bg" src="images/bungalow.png" alt="Bungalow sur la plage de Préa — Let's Flow" loading="lazy">
+        <div class="dormir-card-veil"></div>
         <div class="dormir-card-body">
           <span class="dormir-card-tag">Pieds dans le sable</span>
           <h3>Bungalow <em>plage</em></h3>
@@ -419,7 +457,8 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
       </article>
 
       <article class="dormir-card pousada">
-        <div class="dormir-card-bg"></div>
+        <img class="dormir-card-bg" src="images/chambre.png" alt="Chambre dans une pousada de charme à Préa — Let's Flow" loading="lazy">
+        <div class="dormir-card-veil"></div>
         <div class="dormir-card-body">
           <span class="dormir-card-tag">L'âme locale</span>
           <h3>Pousada de <em>charme</em></h3>
@@ -434,7 +473,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
 <section class="vie">
   <div class="vie-inner">
     <div class="vie-image">
-      <img src="images/kite-beach-life.jpg" alt="Vie sur la plage de Préa — parasol, sable, ambiance détendue">
+      <img src="images/Serrote.jfif" alt="Vue depuis le Serrote — Préa, Jericoacoara, Brésil">
     </div>
     <div class="vie-text">
       <div class="eyebrow">La vie là-bas</div>
@@ -459,8 +498,8 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
         <div class="vie-list-item">
           <div class="ico">🪁</div>
           <div class="body">
-            <strong>Kitesurf, paddle, snorkeling</strong>
-            <span>Tous les sports nautiques sont possibles, encadrés par des écoles locales sérieuses.</span>
+            <strong>Kitesurf, surf, paddle</strong>
+            <span>Tous les sports de glisse sont possibles, encadrés par des écoles locales sérieuses.</span>
           </div>
         </div>
         <div class="vie-list-item">
@@ -613,7 +652,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
 
     <details class="lieu-faq-item">
       <summary>Y a-t-il des choses à faire à part le kitesurf ?</summary>
-      <p>Oui, beaucoup : balades en buggy dans les dunes, visite de la lagune Paraíso, traversée de la dune du Pôr do Sol au coucher du soleil, snorkeling, paddle, yoga, marchés locaux, restaurants au bord de l'eau, et simplement profiter du rythme tranquille du village.</p>
+      <p>Oui, beaucoup : balades en buggy dans les dunes, visite de la lagune Paraíso, traversée de la dune du Pôr do Sol au coucher du soleil, paddle, yoga, marchés locaux, restaurants au bord de l'eau, et simplement profiter du rythme tranquille du village.</p>
     </details>
   </div>
 </section>
