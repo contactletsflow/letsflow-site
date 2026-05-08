@@ -25,7 +25,7 @@
 <meta property="og:title" content="Préa, Brésil — Le spot de Let's Flow">
 <meta property="og:description" content="Tout sur Préa, péninsule de Jericoacoara : climat, vent, plages, accès, hébergement. Le lieu où Let's Flow organise ses événements.">
 <meta property="og:url" content="https://letsflow.com/lieu.html">
-<meta property="og:image" content="https://letsflow.com/images/hero-kiteV3.png">
+<meta property="og:image" content="https://letsflow.com/images/hero-kiteV3.webp">
 
 <!-- ===== Schema.org : TouristDestination + Place + FAQPage ===== -->
 <script type="application/ld+json">
@@ -38,7 +38,7 @@
       "name": "Préa — Jericoacoara, Brésil",
       "description": "Préa est un village de pêcheurs sur la péninsule de Jericoacoara, dans l'État du Ceará au nord-est du Brésil. Spot de kitesurf de renommée mondiale, plages désertes, lagunes turquoise et climat tropical doux toute l'année.",
       "url": "https://letsflow.com/lieu.html",
-      "image": "https://letsflow.com/images/hero-kiteV3.png",
+      "image": "https://letsflow.com/images/hero-kiteV3.webp",
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": -2.8167,
@@ -127,6 +127,16 @@ nav.scrolled{background:#221a17;padding:14px 48px;border-bottom:1px solid rgba(2
 .nav-link.active{opacity:1}.nav-link.active::after{transform:scaleX(1);background:var(--terra)}
 .nav-cta{padding:10px 22px;border:1px solid rgba(253,250,244,.4);color:var(--cream);border-radius:40px;font-size:13px;text-decoration:none;transition:all .4s}
 .nav-cta:hover{background:var(--terra)!important;border-color:var(--terra)!important;color:var(--cream)!important}
+.lang-switch{position:relative;margin-right:4px}
+.lang-btn{background:transparent;border:1px solid rgba(253,250,244,.25);border-radius:40px;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:inherit;cursor:auto;transition:all .3s;display:inline-flex;align-items:center;gap:6px;opacity:.75;font-family:inherit}
+nav.scrolled .lang-btn{border-color:rgba(253,250,244,.3)}.lang-btn:hover{opacity:1}
+.lang-btn .chev{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);transition:transform .3s;margin-top:-2px}
+.lang-switch.open .lang-btn .chev{transform:rotate(-135deg) translate(-1px,-1px);margin-top:2px}
+.lang-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--cream);color:var(--ink);border-radius:14px;padding:6px;min-width:164px;border:1px solid var(--line);box-shadow:0 12px 32px -8px rgba(28,24,18,.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s;z-index:300}
+.lang-switch.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.lang-option{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;border-radius:9px;font-size:13px;color:var(--ink);cursor:auto;text-align:left;transition:background .2s;font-family:inherit}
+.lang-option:hover{background:var(--beige)}.lang-option.active{background:var(--beige);color:var(--terra)}
+.lang-option .name{flex:1}.lang-option .check{width:14px;height:14px;opacity:0;color:var(--terra)}.lang-option.active .check{opacity:1}
 @media(max-width:640px){.nav-link{display:none}nav,nav.scrolled{padding:14px 20px}}
 
 /* EYEBROW commun */
@@ -179,8 +189,8 @@ nav.scrolled{background:#221a17;padding:14px 48px;border-bottom:1px solid rgba(2
 .lieu-route-head .label{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:10px;display:block}
 .lieu-route-head h3{font-family:"Playfair Display",serif;font-size:clamp(22px,3vw,30px);font-weight:400;color:var(--ink);letter-spacing:-.015em}
 .lieu-route-head h3 em{font-style:italic;color:var(--terra)}
-.lieu-route-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;align-items:start;position:relative}
-.lieu-route-steps::before{content:"";position:absolute;top:32px;left:16.5%;right:16.5%;height:2px;background:repeating-linear-gradient(90deg,var(--terra) 0 8px,transparent 8px 16px);z-index:0}
+.lieu-route-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:0;align-items:start;position:relative;max-width:700px;margin:0 auto}
+.lieu-route-steps::before{content:"";position:absolute;top:32px;left:25%;right:25%;height:2px;background:repeating-linear-gradient(90deg,var(--terra) 0 8px,transparent 8px 16px);z-index:0}
 .lieu-route-step{position:relative;z-index:1;text-align:center;padding:0 16px}
 .lieu-route-step .step-num{width:64px;height:64px;border-radius:50%;background:var(--cream);border:2px solid var(--terra);color:var(--terra);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-style:italic;font-weight:500;font-size:24px;margin:0 auto 16px;box-shadow:0 6px 18px -8px rgba(184,90,48,.3)}
 .lieu-route-step h4{font-family:"Playfair Display",serif;font-size:17px;font-weight:500;color:var(--ink);margin-bottom:6px;letter-spacing:-.005em}
@@ -316,18 +326,28 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
 
 <nav id="nav">
   <a href="index.html" class="nav-logo">Let's <em>Flow</em><small>Préa · Jericoacoara · Brésil</small></a>
-  <div class="nav-links">
-    <a href="index.html#offres" class="nav-link">Nos offres</a>
-    <a href="kitesurf.html" class="nav-link">Kitesurf</a>
+    <div class="nav-links">
+    <a href="offres.html" class="nav-link">Nos offres</a>
     <a href="lieu.html" class="nav-link active">Le lieu</a>
+    <a href="kitesurf.html" class="nav-link">Le kitesurf</a>
+    <a href="apropos.html" class="nav-link">À propos de nous</a>
     <a href="index.html#faq" class="nav-link">FAQ</a>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" type="button" onclick="toggleLang(event)"><span id="langCurrent">FR</span><span class="chev"></span></button>
+      <div class="lang-menu">
+        <button class="lang-option active" data-lang="fr" onclick="setLang('fr',event)"><span>🇫🇷</span><span class="name">Français</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en',event)"><span>🇬🇧</span><span class="name">English</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="pt" onclick="setLang('pt',event)"><span>🇧🇷</span><span class="name">Português</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="es" onclick="setLang('es',event)"><span>🇪🇸</span><span class="name">Español</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+    </div>
     <a href="index.html#contact" class="nav-cta">Nous contacter</a>
   </div>
 </nav>
 
 <!-- ===== HERO ===== -->
 <section class="page-hero">
-  <img class="page-hero-bg" src="images/hero-kiteV3.png" alt="Plage de Préa, Brésil — palmiers, dunes et mer turquoise">
+  <img class="page-hero-bg" src="images/prea-01.jpg" alt="Plage de Préa, Brésil — palmiers, dunes et mer turquoise">
   <div class="page-hero-veil"></div>
   <div class="page-hero-inner">
     <div class="crumbs"><a href="index.html">Let's Flow</a> · Le lieu</div>
@@ -355,7 +375,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
     <div>
       <div class="lieu-map-wrap" aria-label="Carte Google Maps de Préa, Brésil">
         <iframe
-          src="https://www.google.com/maps?q=Pr%C3%A9a%2C+Jericoacoara%2C+Cear%C3%A1%2C+Brazil&hl=fr&z=10&output=embed"
+          src="https://www.google.com/maps?q=Pr%C3%A9a%2C+Cruz%2C+Cear%C3%A1%2C+Brazil&hl=fr&z=14&output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Préa, Jericoacoara, Brésil — Google Maps"></iframe>
@@ -371,23 +391,18 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
   <div class="lieu-route">
     <div class="lieu-route-head">
       <span class="label">Le voyage</span>
-      <h3>De Paris à Préa <em>en 3 étapes</em></h3>
+      <h3>De Paris à Préa <em>en 2 étapes</em></h3>
     </div>
     <div class="lieu-route-steps">
       <div class="lieu-route-step">
         <div class="step-num">1</div>
-        <h4>Vol vers Fortaleza</h4>
-        <p>Vol international depuis Paris (escale Lisbonne, Madrid ou São Paulo selon la compagnie). Air France, TAP, Latam.</p>
+        <h4>Arrivée à Fortaleza</h4>
+        <p>Vol international depuis Paris (escale Lisbonne, Madrid ou São Paulo). Air France, TAP, Latam. On t'accueille à l'aéroport.</p>
       </div>
       <div class="lieu-route-step">
         <div class="step-num">2</div>
-        <h4>Transfert privé en 4×4</h4>
-        <p>On t'accueille à l'aéroport de Fortaleza pour un transfert privé à travers dunes et lagunes.</p>
-      </div>
-      <div class="lieu-route-step">
-        <div class="step-num">3</div>
-        <h4>Préa, 4h30 plus tard</h4>
-        <p>Tu poses tes valises dans ton hébergement. La déconnexion peut commencer.</p>
+        <h4>Transfert en 4×4 jusqu'à Préa</h4>
+        <p>Voiture 4×4 privatisée à travers dunes et lagunes. 4h30 de route : tu poses tes valises, la déconnexion commence.</p>
       </div>
     </div>
   </div>
@@ -437,7 +452,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
 
     <div class="dormir-grid">
       <article class="dormir-card villa">
-        <img class="dormir-card-bg" src="images/Villa-privee.jpg" alt="Villa privée à Préa avec piscine — Let's Flow" loading="lazy">
+        <img class="dormir-card-bg" src="images/Villa-privee.webp" alt="Villa privée à Préa avec piscine — Let's Flow" loading="lazy">
         <div class="dormir-card-veil"></div>
         <div class="dormir-card-body">
           <span class="dormir-card-tag">Le confort total</span>
@@ -447,7 +462,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
       </article>
 
       <article class="dormir-card bungalow">
-        <img class="dormir-card-bg" src="images/bungalow.png" alt="Bungalow sur la plage de Préa — Let's Flow" loading="lazy">
+        <img class="dormir-card-bg" src="images/bungalow.webp" alt="Bungalow sur la plage de Préa — Let's Flow" loading="lazy">
         <div class="dormir-card-veil"></div>
         <div class="dormir-card-body">
           <span class="dormir-card-tag">Pieds dans le sable</span>
@@ -457,7 +472,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
       </article>
 
       <article class="dormir-card pousada">
-        <img class="dormir-card-bg" src="images/chambre.png" alt="Chambre dans une pousada de charme à Préa — Let's Flow" loading="lazy">
+        <img class="dormir-card-bg" src="images/chambre.webp" alt="Chambre dans une pousada de charme à Préa — Let's Flow" loading="lazy">
         <div class="dormir-card-veil"></div>
         <div class="dormir-card-body">
           <span class="dormir-card-tag">L'âme locale</span>
@@ -473,7 +488,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
 <section class="vie">
   <div class="vie-inner">
     <div class="vie-image">
-      <img src="images/Serrote.jfif" alt="Vue depuis le Serrote — Préa, Jericoacoara, Brésil">
+      <img src="images/lagoa1.webp" alt="Lagoa de Préa — eaux turquoise, Jericoacoara, Brésil">
     </div>
     <div class="vie-text">
       <div class="eyebrow">La vie là-bas</div>
@@ -671,7 +686,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
   <div class="footer-inner">
     <a href="index.html" class="footer-logo">Let's <em>Flow</em></a>
     <div class="footer-links">
-      <a href="#">Mentions légales</a><a href="#">CGV</a><a href="#">Politique de confidentialité</a><a href="kitesurf.html">Kitesurf</a><a href="wavessummit.html">Wave Summit</a><a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
+      <a href="mentions-legales.html">Mentions légales</a><a <a href="confidentialite.html">Politique de confidentialité</a><a href="kitesurf.html">Kitesurf</a><a href="wavessummit.html">Wave Summit</a><a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
     </div>
     <div class="footer-copy">© 2026 Let's Flow · Préa, Brésil</div>
   </div>
@@ -685,3 +700,4 @@ window.addEventListener('scroll',()=>{
 
 </body>
 </html>
+      

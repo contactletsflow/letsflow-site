@@ -36,6 +36,36 @@
     <loc>https://letsflow.com/lieu.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://letsflow.com/images/prea-01.jpg</image:loc>
+      <image:title>Préa, Ceará, Brésil — Le lieu Let's Flow</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://letsflow.com/offres.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://letsflow.com/images/summit-2.png</image:loc>
+      <image:title>Nos offres — Wave Summit &amp; Wave Escape par Let's Flow</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://letsflow.com/waveescape.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://letsflow.com/images/escape-1.jpg</image:loc>
+      <image:title>Wave Escape — Retraite bien-être à Préa, Brésil</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://letsflow.com/apropos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

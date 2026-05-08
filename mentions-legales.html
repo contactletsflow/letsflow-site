@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Let's Flow</title>
+<meta name="description" content="Mentions légales du site Let's Flow — éditeur, hébergeur, propriété intellectuelle.">
+<link rel="canonical" href="https://letsflow.com/mentions-legales.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c1812;--bark:#3d2f1e;--terra:#b85a30;--terra-deep:#8e3f1d;
+  --terra-soft:#dba88a;--terra-light:#ecc7ad;--terra-pale:#f7e3d2;
+  --sage:#6b7f62;--sage-light:#8fa483;--sage-pale:#c8d4c0;
+  --linen:#faf6ef;--cream:#fdfaf4;--warm-white:#fefcf8;--beige:#f3ede3;--line:rgba(28,24,18,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--warm-white);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;z-index:200;color:var(--cream);background:#221a17;border-bottom:1px solid rgba(253,250,244,.08);transition:background .4s,padding .4s,box-shadow .4s}
+nav.scrolled{padding:14px 48px;box-shadow:0 6px 22px -10px rgba(0,0,0,.45)}
+.nav-logo{font-family:"Playfair Display",serif;font-weight:500;font-size:21px;letter-spacing:-.02em;color:inherit;text-decoration:none;line-height:1}
+.nav-logo em{font-style:italic;font-weight:400;color:var(--sage-light)}
+.nav-logo small{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.5;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{padding:8px 14px;color:var(--cream);text-decoration:none;font-size:13px;border-radius:40px;transition:all .3s;opacity:.8;position:relative;font-weight:500}
+.nav-link::after{content:"";position:absolute;bottom:4px;left:14px;right:14px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.nav-link:hover{opacity:1}.nav-link:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-cta{padding:10px 22px;border:1px solid rgba(253,250,244,.4);color:var(--cream);border-radius:40px;font-size:13px;text-decoration:none;transition:all .4s}
+.nav-cta:hover{background:var(--terra)!important;border-color:var(--terra)!important;color:var(--cream)!important}
+.lang-switch{position:relative;margin-right:4px}
+.lang-btn{background:transparent;border:1px solid rgba(253,250,244,.25);border-radius:40px;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:inherit;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:6px;opacity:.75;font-family:inherit}
+nav.scrolled .lang-btn{border-color:rgba(253,250,244,.3)}.lang-btn:hover{opacity:1}
+.lang-btn .chev{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);transition:transform .3s;margin-top:-2px}
+.lang-switch.open .lang-btn .chev{transform:rotate(-135deg) translate(-1px,-1px);margin-top:2px}
+.lang-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--cream);color:var(--ink);border-radius:14px;padding:6px;min-width:164px;border:1px solid var(--line);box-shadow:0 12px 32px -8px rgba(28,24,18,.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s;z-index:300}
+.lang-switch.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.lang-option{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;border-radius:9px;font-size:13px;color:var(--ink);cursor:pointer;text-align:left;transition:background .2s;font-family:inherit}
+.lang-option:hover{background:var(--beige)}.lang-option.active{background:var(--beige);color:var(--terra)}
+.lang-option .name{flex:1}.lang-option .check{width:14px;height:14px;opacity:0;color:var(--terra)}.lang-option.active .check{opacity:1}
+@media(max-width:640px){.nav-link{display:none}nav,nav.scrolled{padding:14px 20px}}
+
+/* LEGAL CONTENT */
+.legal-wrap{max-width:760px;margin:0 auto;padding:140px 48px 100px}
+.legal-wrap h1{font-family:"Playfair Display",serif;font-size:clamp(32px,4vw,52px);font-weight:400;letter-spacing:-.025em;line-height:1.05;margin-bottom:12px}
+.legal-wrap h1 em{font-style:italic;color:var(--terra)}
+.legal-meta{font-size:13px;color:var(--bark);opacity:.55;margin-bottom:60px;letter-spacing:.02em}
+.legal-section{margin-bottom:48px}
+.legal-section h2{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;letter-spacing:-.01em;margin-bottom:16px;color:var(--ink);padding-bottom:10px;border-bottom:1px solid var(--line)}
+.legal-section p{font-size:15px;line-height:1.85;color:var(--bark);opacity:.85;margin-bottom:12px}
+.legal-section p:last-child{margin-bottom:0}
+.placeholder{background:var(--terra-pale);border-radius:4px;padding:2px 6px;font-size:13px;color:var(--terra-deep);font-style:italic}
+a.legal-link{color:var(--terra);text-decoration:underline;text-underline-offset:3px}
+
+/* FOOTER */
+footer{background:#221a17;color:var(--cream);padding:48px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center}
+.footer-logo{font-family:"Playfair Display",serif;font-weight:500;font-size:22px;letter-spacing:-.02em;color:var(--cream);text-decoration:none;opacity:.7;transition:opacity .3s}
+.footer-logo:hover{opacity:.6}.footer-logo em{font-style:italic;color:var(--sage-light)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.footer-links a{font-size:12px;opacity:.32;color:var(--cream);text-decoration:none;letter-spacing:.04em;transition:opacity .3s}
+.footer-links a:hover{opacity:.8}
+.footer-copy{font-size:11px;opacity:.22;letter-spacing:.04em}
+@media(max-width:640px){.legal-wrap{padding:120px 24px 80px}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Let's <em>Flow</em><small>Préa · Jericoacoara · Brésil</small></a>
+  <div class="nav-links">
+    <a href="offres.html" class="nav-link">Nos offres</a>
+    <a href="lieu.html" class="nav-link">Le lieu</a>
+    <a href="kitesurf.html" class="nav-link">Le kitesurf</a>
+    <a href="apropos.html" class="nav-link">À propos de nous</a>
+    <a href="index.html#faq" class="nav-link">FAQ</a>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" type="button" onclick="toggleLang(event)"><span id="langCurrent">FR</span><span class="chev"></span></button>
+      <div class="lang-menu">
+        <button class="lang-option active" data-lang="fr" onclick="setLang('fr',event)"><span>🇫🇷</span><span class="name">Français</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en',event)"><span>🇬🇧</span><span class="name">English</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="pt" onclick="setLang('pt',event)"><span>🇧🇷</span><span class="name">Português</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="es" onclick="setLang('es',event)"><span>🇪🇸</span><span class="name">Español</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+  </div>
+</nav>
+
+<main class="legal-wrap">
+  <h1>Mentions<br><em>légales</em></h1>
+  <p class="legal-meta">Dernière mise à jour : mai 2026</p>
+
+  <div class="legal-section">
+    <h2>Éditeur du site</h2>
+    <p>Le site <strong>letsflow.com</strong> est édité par :</p>
+    <p>
+      Raison sociale : <span class="placeholder">[ À compléter ]</span><br>
+      Forme juridique : <span class="placeholder">[ ex. SAS, SARL, Auto-entrepreneur ]</span><br>
+      Capital social : <span class="placeholder">[ À compléter ]</span><br>
+      Siège social : <span class="placeholder">[ Adresse complète ]</span><br>
+      SIRET : <span class="placeholder">[ À compléter ]</span><br>
+      N° TVA intracommunautaire : <span class="placeholder">[ À compléter ]</span><br>
+      Email : <a href="mailto:contactletsflow@gmail.com" class="legal-link">contactletsflow@gmail.com</a>
+    </p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Directrice de la publication</h2>
+    <p><span class="placeholder">[ Prénom Nom ]</span>, en qualité de <span class="placeholder">[ Gérante / Présidente ]</span>.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Hébergement</h2>
+    <p>
+      Ce site est hébergé par :<br>
+      <strong>GitHub Pages</strong> — GitHub, Inc.<br>
+      88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
+      <a href="https://pages.github.com" class="legal-link" target="_blank" rel="noopener">pages.github.com</a>
+    </p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Propriété intellectuelle</h2>
+    <p>L'ensemble des contenus présents sur ce site (textes, photographies, illustrations, logos, vidéos) est la propriété exclusive de Let's Flow ou de leurs auteurs respectifs, et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle.</p>
+    <p>Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de Let's Flow.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Limitation de responsabilité</h2>
+    <p>Let's Flow s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Cependant, Let's Flow ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.</p>
+    <p>Let's Flow décline toute responsabilité pour tout dommage résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations mises à disposition sur le site.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Données personnelles & cookies</h2>
+    <p>Pour toute information concernant la collecte et le traitement de vos données personnelles, veuillez consulter notre <a href="confidentialite.html" class="legal-link">Politique de confidentialité</a>.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Droit applicable</h2>
+    <p>Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Let's <em>Flow</em></a>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="offres.html">Nos offres</a>
+      <a href="lieu.html">Le lieu</a>
+      <a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
+    </div>
+    <div class="footer-copy">© 2026 Let's Flow · Préa, Brésil</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+function toggleLang(e){e.stopPropagation();document.getElementById('langSwitch').classList.toggle('open');}
+document.addEventListener('click',()=>document.getElementById('langSwitch')?.classList.remove('open'));
+function setLang(lang,e){if(e)e.stopPropagation();document.getElementById('langCurrent').textContent=lang.toUpperCase();document.querySelectorAll('.lang-option').forEach(o=>o.classList.toggle('active',o.dataset.lang===lang));document.getElementById('langSwitch').classList.remove('open');}
+</script>
+</body>
+</html>

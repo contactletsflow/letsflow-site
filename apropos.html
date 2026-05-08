@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== SEO ===== -->
+<title>À propos — L'histoire de Let's Flow · Préa, Brésil</title>
+<meta name="description" content="Deux femmes issues du monde de l'entreprise qui ont décidé de ne plus mettre leurs rêves en pause. Le 12 décembre, 'Pourquoi pas nous ?' est devenu Let's Flow.">
+<link rel="canonical" href="https://letsflow.com/apropos.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta name="theme-color" content="#b85a30">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Let's Flow">
+<meta property="og:title" content="À propos — L'histoire de Let's Flow">
+<meta property="og:description" content="Deux femmes, un même rêve mis de côté. Un 12 décembre, 'Pourquoi pas nous ?' est devenu Let's Flow.">
+<meta property="og:url" content="https://letsflow.com/apropos.html">
+<meta property="og:image" content="https://letsflow.com/images/hero-palmierV1.webp">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://letsflow.com/apropos.html",
+      "name": "À propos de Let's Flow",
+      "url": "https://letsflow.com/apropos.html",
+      "description": "Deux femmes issues du monde de l'entreprise à l'origine de Let's Flow — expériences alliant yoga, kitesurf, bien-être et lieux d'exception à Préa, Brésil.",
+      "publisher": {"@id": "https://letsflow.com/#organization"}
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#1c1812;--bark:#3d2f1e;--terra:#b85a30;--terra-deep:#8e3f1d;
+  --terra-soft:#dba88a;--terra-light:#ecc7ad;--terra-pale:#f7e3d2;
+  --sage:#6b7f62;--sage-light:#8fa483;--sage-pale:#c8d4c0;
+  --linen:#faf6ef;--cream:#fdfaf4;--warm-white:#fefcf8;--line:rgba(28,24,18,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+*::selection{background:var(--terra);color:var(--cream)}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--warm-white);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;z-index:200;color:var(--cream);background:rgba(34,26,23,.55);backdrop-filter:blur(14px) saturate(1.15);-webkit-backdrop-filter:blur(14px) saturate(1.15);border-bottom:1px solid rgba(253,250,244,.05);transition:background .4s,padding .4s,box-shadow .4s}
+nav.scrolled{background:#221a17;padding:14px 48px;border-bottom:1px solid rgba(253,250,244,.08);box-shadow:0 6px 22px -10px rgba(0,0,0,.45)}
+.nav-logo{font-family:"Playfair Display",serif;font-weight:500;font-size:21px;letter-spacing:-.02em;color:inherit;text-decoration:none;line-height:1}
+.nav-logo em{font-style:italic;font-weight:400;color:var(--sage-light)}
+.nav-logo small{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.5;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{padding:8px 14px;color:var(--cream);text-decoration:none;font-size:13px;border-radius:40px;transition:all .3s;opacity:.9;position:relative;font-weight:500}
+.nav-link::after{content:"";position:absolute;bottom:4px;left:14px;right:14px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.nav-link:hover{opacity:1}.nav-link:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-link.active{opacity:1}.nav-link.active::after{transform:scaleX(1);background:var(--terra)}
+.nav-cta{padding:10px 22px;border:1px solid rgba(253,250,244,.4);color:var(--cream);border-radius:40px;font-size:13px;text-decoration:none;transition:all .4s}
+.nav-cta:hover{background:var(--terra)!important;border-color:var(--terra)!important;color:var(--cream)!important}
+.lang-switch{position:relative;margin-right:4px}
+.lang-btn{background:transparent;border:1px solid rgba(253,250,244,.25);border-radius:40px;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:inherit;cursor:auto;transition:all .3s;display:inline-flex;align-items:center;gap:6px;opacity:.75;font-family:inherit}
+nav.scrolled .lang-btn{border-color:rgba(253,250,244,.3)}.lang-btn:hover{opacity:1}
+.lang-btn .chev{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);transition:transform .3s;margin-top:-2px}
+.lang-switch.open .lang-btn .chev{transform:rotate(-135deg) translate(-1px,-1px);margin-top:2px}
+.lang-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--cream);color:var(--ink);border-radius:14px;padding:6px;min-width:164px;border:1px solid var(--line);box-shadow:0 12px 32px -8px rgba(28,24,18,.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s;z-index:300}
+.lang-switch.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.lang-option{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;border-radius:9px;font-size:13px;color:var(--ink);cursor:auto;text-align:left;transition:background .2s;font-family:inherit}
+.lang-option:hover{background:var(--beige)}.lang-option.active{background:var(--beige);color:var(--terra)}
+.lang-option .name{flex:1}.lang-option .check{width:14px;height:14px;opacity:0;color:var(--terra)}.lang-option.active .check{opacity:1}
+@media(max-width:640px){.nav-link{display:none}nav,nav.scrolled{padding:14px 20px}}
+
+/* EYEBROW */
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);margin-bottom:20px;font-weight:500;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:18px;height:1px;background:currentColor}
+.eyebrow.center{justify-content:center;display:flex}
+.eyebrow.center::before{display:none}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:50px;font-size:14px;letter-spacing:.03em;text-decoration:none;transition:all .45s cubic-bezier(.2,.8,.2,1);border:none;font-family:inherit;white-space:nowrap}
+.btn-terra{background:var(--terra);color:var(--cream)}
+.btn-terra:hover{background:var(--terra-deep);transform:translateY(-2px);box-shadow:0 14px 36px -8px rgba(181,80,42,.45)}
+.btn-outline{background:transparent;color:var(--cream);border:1px solid rgba(253,250,244,.4)}
+.btn-outline:hover{background:rgba(253,250,244,.1);border-color:var(--cream)}
+.btn .arr{transition:transform .4s}.btn:hover .arr{transform:translateX(5px)}
+
+/* HERO */
+.page-hero{min-height:68vh;position:relative;overflow:hidden;color:var(--cream);display:flex;flex-direction:column;justify-content:flex-end;padding:140px 48px 80px}
+.page-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.page-hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,10,.3) 0%,rgba(20,14,10,.15) 35%,rgba(20,14,10,.58) 75%,rgba(15,10,8,.95) 100%);z-index:1}
+.page-hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%}
+.crumbs{font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.85;margin-bottom:18px}
+.crumbs a{color:var(--cream);text-decoration:none;opacity:.65;transition:opacity .3s}
+.crumbs a:hover{opacity:1}
+.page-hero h1{font-family:"Playfair Display",serif;font-size:clamp(48px,8vw,104px);font-weight:500;line-height:.92;letter-spacing:-.04em;margin-bottom:22px;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+.page-hero h1 em{font-style:italic;font-weight:400;color:#f5d99c}
+.page-hero .lead{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(20px,2.5vw,28px);max-width:680px;line-height:1.45;color:#fff5e3;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+@media(max-width:640px){.page-hero{padding:110px 24px 56px}}
+
+/* GENÈSE */
+.genese{padding:120px 48px;background:var(--warm-white)}
+.genese-inner{max-width:820px;margin:0 auto;text-align:center}
+.genese h2{font-family:"Playfair Display",serif;font-size:clamp(32px,5vw,54px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-top:14px}
+.genese h2 em{font-style:italic;color:var(--terra)}
+.genese-lead{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(20px,2.4vw,26px);line-height:1.6;color:var(--bark);margin-top:32px;max-width:64ch;margin-left:auto;margin-right:auto}
+.genese-body{font-size:16.5px;line-height:1.9;color:var(--bark);opacity:.88;margin-top:22px;max-width:60ch;margin-left:auto;margin-right:auto}
+/* La date-clé */
+.date-clef{display:inline-flex;align-items:center;gap:14px;margin-top:40px;padding:18px 28px;border-radius:16px;background:var(--terra-pale);border:1px solid rgba(184,90,48,.2)}
+.date-clef .dc-num{font-family:"Playfair Display",serif;font-size:36px;font-style:italic;color:var(--terra);font-weight:400;line-height:1}
+.date-clef .dc-text{text-align:left}
+.date-clef .dc-text strong{display:block;font-size:13px;font-weight:600;color:var(--terra-deep);letter-spacing:.04em}
+.date-clef .dc-text span{font-size:13px;color:var(--bark);opacity:.75}
+@media(max-width:640px){.genese{padding:72px 24px}}
+
+/* VALEURS */
+.valeurs{padding:100px 48px;background:linear-gradient(170deg,var(--terra-pale) 0%,#fdeede 55%,var(--linen) 100%);position:relative;overflow:hidden}
+.valeurs::before{content:"";position:absolute;top:-160px;right:-160px;width:480px;height:480px;background:radial-gradient(circle,rgba(184,90,48,.11) 0%,transparent 65%);border-radius:50%}
+.valeurs-inner{max-width:1100px;margin:0 auto;position:relative}
+.valeurs-head{text-align:center;margin-bottom:60px}
+.valeurs-head h2{font-family:"Playfair Display",serif;font-size:clamp(30px,4.5vw,50px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-top:14px}
+.valeurs-head h2 em{font-style:italic;color:var(--terra)}
+.valeurs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.valeur-card{background:rgba(254,252,248,.8);backdrop-filter:blur(8px);border-radius:20px;padding:34px 28px;border:1px solid rgba(253,250,244,.7);box-shadow:0 10px 28px -14px rgba(28,24,18,.15);transition:transform .4s,box-shadow .4s}
+.valeur-card:hover{transform:translateY(-4px);box-shadow:0 22px 48px -20px rgba(28,24,18,.2)}
+.valeur-num{font-family:"Playfair Display",serif;font-size:38px;font-style:italic;color:var(--terra);line-height:1;margin-bottom:16px;display:block}
+.valeur-card h3{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;color:var(--ink);margin-bottom:10px}
+.valeur-card p{font-size:14px;line-height:1.75;color:var(--bark);opacity:.85}
+@media(max-width:768px){.valeurs{padding:72px 24px}.valeurs-grid{grid-template-columns:1fr;gap:16px}}
+
+/* FONDATRICES */
+.fondatrices{padding:120px 48px;background:var(--warm-white)}
+.fondatrices-inner{max-width:1200px;margin:0 auto}
+.fondatrices-head{text-align:center;margin-bottom:80px}
+.fondatrices-head h2{font-family:"Playfair Display",serif;font-size:clamp(30px,4.5vw,52px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-top:14px}
+.fondatrices-head h2 em{font-style:italic;color:var(--terra)}
+
+.fondatrice{display:grid;grid-template-columns:400px 1fr;gap:64px;align-items:center;margin-bottom:80px}
+.fondatrice:last-child{margin-bottom:0}
+.fondatrice.reverse{direction:rtl}
+.fondatrice.reverse > *{direction:ltr}
+
+.fondatrice-photo{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 30px 80px -28px rgba(28,24,18,.28)}
+.fondatrice-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.fondatrice-photo:hover img{transform:scale(1.04)}
+.fondatrice-tag{position:absolute;bottom:20px;left:20px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;padding:7px 14px;border-radius:40px;background:rgba(184,90,48,.82);backdrop-filter:blur(6px);color:var(--cream)}
+
+.fondatrice-text .f-prenom{font-family:"Playfair Display",serif;font-size:clamp(30px,3.8vw,46px);font-weight:500;letter-spacing:-.025em;line-height:1;color:var(--ink)}
+.fondatrice-text .f-prenom em{font-style:italic;font-weight:400;color:var(--terra)}
+.fondatrice-text .f-role{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-top:8px;margin-bottom:24px;display:block;opacity:.85}
+.fondatrice-text .f-quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(18px,2vw,22px);line-height:1.55;color:var(--bark);border-left:3px solid var(--terra-light);padding-left:20px;margin-bottom:22px}
+.fondatrice-text .f-bio{font-size:15.5px;line-height:1.85;color:var(--bark);opacity:.86}
+.fondatrice-text .f-bio + .f-bio{margin-top:14px}
+
+.sep{max-width:1200px;margin:0 auto;height:1px;background:var(--line)}
+
+@media(max-width:960px){
+  .fondatrice,.fondatrice.reverse{grid-template-columns:1fr;gap:36px;direction:ltr}
+  .fondatrice-photo{aspect-ratio:4/3;max-width:400px}
+  .fondatrices{padding:72px 24px}
+}
+
+/* VISION */
+.vision{padding:100px 48px;background:var(--linen)}
+.vision-inner{max-width:860px;margin:0 auto;text-align:center}
+.vision h2{font-family:"Playfair Display",serif;font-size:clamp(30px,4.5vw,52px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-top:14px}
+.vision h2 em{font-style:italic;color:var(--terra)}
+.vision-quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(22px,3vw,32px);line-height:1.5;color:var(--terra-deep);margin-top:36px;position:relative;padding:0 20px}
+.vision-quote::before{content:"\201C";font-size:80px;color:var(--terra-light);position:absolute;top:-20px;left:-10px;line-height:1;font-family:"Playfair Display",serif;opacity:.6}
+@media(max-width:640px){.vision{padding:72px 24px}}
+
+/* CTA FINAL */
+.cta-final{padding:96px 48px;background:#221a17;text-align:center;position:relative;overflow:hidden}
+.cta-final::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(184,90,48,.18) 0%,transparent 70%)}
+.cta-inner{max-width:680px;margin:0 auto;position:relative}
+.cta-final .eyebrow{color:var(--terra-light)}
+.cta-final h2{font-family:"Playfair Display",serif;font-size:clamp(30px,4.5vw,52px);font-weight:400;line-height:1.05;letter-spacing:-.025em;color:var(--cream);margin-top:14px;margin-bottom:16px}
+.cta-final h2 em{font-style:italic;color:#f5d99c}
+.cta-final p{font-size:16px;line-height:1.7;color:rgba(253,250,244,.65);max-width:44ch;margin:0 auto 32px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px solid rgba(253,250,244,.06)}
+.footer-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+.footer-logo{font-family:"Playfair Display",serif;font-size:19px;font-weight:500;letter-spacing:-.02em;text-decoration:none;color:var(--cream);transition:opacity .3s}
+.footer-logo:hover{opacity:.6}.footer-logo em{font-style:italic;color:var(--sage-light)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{font-size:12px;opacity:.32;color:var(--cream);text-decoration:none;letter-spacing:.04em;transition:opacity .3s}
+.footer-links a:hover{opacity:.8}
+.footer-copy{font-size:11px;opacity:.22;letter-spacing:.04em}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.2,.8,.2,1),transform .75s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Let's <em>Flow</em><small>Préa · Jericoacoara · Brésil</small></a>
+    <div class="nav-links">
+    <a href="offres.html" class="nav-link">Nos offres</a>
+    <a href="lieu.html" class="nav-link">Le lieu</a>
+    <a href="kitesurf.html" class="nav-link">Le kitesurf</a>
+    <a href="apropos.html" class="nav-link active">À propos de nous</a>
+    <a href="index.html#faq" class="nav-link">FAQ</a>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" type="button" onclick="toggleLang(event)"><span id="langCurrent">FR</span><span class="chev"></span></button>
+      <div class="lang-menu">
+        <button class="lang-option active" data-lang="fr" onclick="setLang('fr',event)"><span>🇫🇷</span><span class="name">Français</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en',event)"><span>🇬🇧</span><span class="name">English</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="pt" onclick="setLang('pt',event)"><span>🇧🇷</span><span class="name">Português</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="es" onclick="setLang('es',event)"><span>🇪🇸</span><span class="name">Español</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="page-hero">
+  <img class="page-hero-bg" src="images/apropos-hero.webp" alt="Let's Flow — Notre histoire">
+  <div class="page-hero-veil"></div>
+  <div class="page-hero-inner">
+    <div class="crumbs"><a href="index.html">Let's Flow</a> · À propos</div>
+    <h1>Et pourquoi<br><em>pas nous ?</em></h1>
+    <p class="lead">Deux femmes, un même rêve mis de côté. Une conversation de trop, et tout a basculé.</p>
+  </div>
+</section>
+
+<!-- ===== GENÈSE ===== -->
+<section class="genese">
+  <div class="genese-inner reveal">
+    <div class="eyebrow center">Notre histoire</div>
+    <h2>De la routine<br>à <em>Let's Flow.</em></h2>
+    <p class="genese-lead">
+      Issues du monde de l'entreprise — un univers exigeant, structuré, stimulant… mais qui, avec le temps, nous a fait mettre nos propres rêves en pause.
+    </p>
+    <p class="genese-body">
+      Entre réunions à rallonge, deadlines serrées et vie quotidienne bien remplie, la routine avait pris le dessus. Une vie « normale », comme tant d'autres la vivent. Et pourtant, au cœur de ce monde où tout semblait prévu, nous nous sommes rencontrées.
+    </p>
+    <p class="genese-body">
+      À force de discussions sur la réussite de projets qui allient carrière et passion, nous avons réalisé que nous partagions le même rêve — celui que nous avions mis de côté depuis longtemps. À l'issue de chacune de ces conversations, nous nous disions : <em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra-deep)">&laquo;&nbsp;Et pourquoi pas nous&nbsp;?&nbsp;&raquo;</em>
+    </p>
+    <div class="date-clef">
+      <div class="dc-num">12</div>
+      <div class="dc-text">
+        <strong>Décembre</strong>
+        <span>Le jour où "Pourquoi pas nous ?" est devenu Let's Flow.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VALEURS ===== -->
+<section class="valeurs">
+  <div class="valeurs-inner">
+    <div class="valeurs-head reveal">
+      <div class="eyebrow center">Notre approche</div>
+      <h2>Ce qui guide<br>chaque <em>expérience.</em></h2>
+    </div>
+    <div class="valeurs-grid">
+      <div class="valeur-card reveal">
+        <span class="valeur-num">01</span>
+        <h3>Des lieux d'exception</h3>
+        <p>Yoga, kitesurf, reconnexion à soi et immersion dans des endroits rares sont au cœur de notre approche. Le cadre n'est pas un détail — c'est ce qui rend tout possible.</p>
+      </div>
+      <div class="valeur-card reveal d1">
+        <span class="valeur-num">02</span>
+        <h3>Des parenthèses précieuses</h3>
+        <p>Chaque expérience Let's Flow est pensée comme un moment où le temps ralentit et où l'essentiel retrouve sa place. Pas un voyage de plus — une vraie coupure.</p>
+      </div>
+      <div class="valeur-card reveal d2">
+        <span class="valeur-num">03</span>
+        <h3>Une exigence de qualité</h3>
+        <p>Deux sensibilités, une même vision : offrir des expériences rares, authentiques et profondément transformatrices. Où chaque instant est pensé, soigné, voulu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISION ===== -->
+<section class="vision">
+  <div class="vision-inner reveal">
+    <div class="eyebrow center">Notre rêve</div>
+    <h2>Vous faire<br><em>rêver à votre tour.</em></h2>
+    <p class="vision-quote">
+      Notre rêve, c'est de vous faire rêver à votre tour.
+    </p>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-final">
+  <div class="cta-inner">
+    <div class="eyebrow center">On se parle ?</div>
+    <h2>Une envie,<br>une <em>question</em> ?</h2>
+    <p>On répond toujours personnellement. Pas de formulaire qui part dans le vide.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn btn-terra">Nous écrire <span class="arr">→</span></a>
+      <a href="offres.html" class="btn btn-outline">Voir nos offres</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Let's <em>Flow</em></a>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a 
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="offres.html">Nos offres</a>
+      <a href="lieu.html">Le lieu</a>
+      <a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
+    </div>
+    <div class="footer-copy">© 2026 Let's Flow · Préa, Brésil</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+const io=new IntersectionObserver(e=>{
+  e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');io.unobserve(el.target);}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

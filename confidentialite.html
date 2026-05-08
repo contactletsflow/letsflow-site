@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Let's Flow</title>
+<meta name="description" content="Politique de confidentialité et de protection des données personnelles de Let's Flow, conformément au RGPD.">
+<link rel="canonical" href="https://letsflow.com/confidentialite.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c1812;--bark:#3d2f1e;--terra:#b85a30;--terra-deep:#8e3f1d;
+  --terra-soft:#dba88a;--terra-light:#ecc7ad;--terra-pale:#f7e3d2;
+  --sage:#6b7f62;--sage-light:#8fa483;--sage-pale:#c8d4c0;
+  --linen:#faf6ef;--cream:#fdfaf4;--warm-white:#fefcf8;--beige:#f3ede3;--line:rgba(28,24,18,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--warm-white);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;z-index:200;color:var(--cream);background:#221a17;border-bottom:1px solid rgba(253,250,244,.08);transition:background .4s,padding .4s,box-shadow .4s}
+nav.scrolled{padding:14px 48px;box-shadow:0 6px 22px -10px rgba(0,0,0,.45)}
+.nav-logo{font-family:"Playfair Display",serif;font-weight:500;font-size:21px;letter-spacing:-.02em;color:inherit;text-decoration:none;line-height:1}
+.nav-logo em{font-style:italic;font-weight:400;color:var(--sage-light)}
+.nav-logo small{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.5;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{padding:8px 14px;color:var(--cream);text-decoration:none;font-size:13px;border-radius:40px;transition:all .3s;opacity:.8;position:relative;font-weight:500}
+.nav-link::after{content:"";position:absolute;bottom:4px;left:14px;right:14px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.nav-link:hover{opacity:1}.nav-link:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-cta{padding:10px 22px;border:1px solid rgba(253,250,244,.4);color:var(--cream);border-radius:40px;font-size:13px;text-decoration:none;transition:all .4s}
+.nav-cta:hover{background:var(--terra)!important;border-color:var(--terra)!important;color:var(--cream)!important}
+.lang-switch{position:relative;margin-right:4px}
+.lang-btn{background:transparent;border:1px solid rgba(253,250,244,.25);border-radius:40px;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:inherit;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:6px;opacity:.75;font-family:inherit}
+nav.scrolled .lang-btn{border-color:rgba(253,250,244,.3)}.lang-btn:hover{opacity:1}
+.lang-btn .chev{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);transition:transform .3s;margin-top:-2px}
+.lang-switch.open .lang-btn .chev{transform:rotate(-135deg) translate(-1px,-1px);margin-top:2px}
+.lang-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--cream);color:var(--ink);border-radius:14px;padding:6px;min-width:164px;border:1px solid var(--line);box-shadow:0 12px 32px -8px rgba(28,24,18,.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s;z-index:300}
+.lang-switch.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.lang-option{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;border-radius:9px;font-size:13px;color:var(--ink);cursor:pointer;text-align:left;transition:background .2s;font-family:inherit}
+.lang-option:hover{background:var(--beige)}.lang-option.active{background:var(--beige);color:var(--terra)}
+.lang-option .name{flex:1}.lang-option .check{width:14px;height:14px;opacity:0;color:var(--terra)}.lang-option.active .check{opacity:1}
+@media(max-width:640px){.nav-link{display:none}nav,nav.scrolled{padding:14px 20px}}
+
+/* LEGAL CONTENT */
+.legal-wrap{max-width:760px;margin:0 auto;padding:140px 48px 100px}
+.legal-wrap h1{font-family:"Playfair Display",serif;font-size:clamp(32px,4vw,52px);font-weight:400;letter-spacing:-.025em;line-height:1.05;margin-bottom:12px}
+.legal-wrap h1 em{font-style:italic;color:var(--terra)}
+.legal-meta{font-size:13px;color:var(--bark);opacity:.55;margin-bottom:60px;letter-spacing:.02em}
+.legal-section{margin-bottom:48px}
+.legal-section h2{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;letter-spacing:-.01em;margin-bottom:16px;color:var(--ink);padding-bottom:10px;border-bottom:1px solid var(--line)}
+.legal-section p{font-size:15px;line-height:1.85;color:var(--bark);opacity:.85;margin-bottom:12px}
+.legal-section p:last-child{margin-bottom:0}
+.legal-section ul{list-style:none;margin:12px 0;padding:0}
+.legal-section ul li{font-size:15px;line-height:1.85;color:var(--bark);opacity:.85;padding-left:18px;position:relative;margin-bottom:6px}
+.legal-section ul li::before{content:"–";position:absolute;left:0;color:var(--terra);opacity:.7}
+.placeholder{background:var(--terra-pale);border-radius:4px;padding:2px 6px;font-size:13px;color:var(--terra-deep);font-style:italic}
+a.legal-link{color:var(--terra);text-decoration:underline;text-underline-offset:3px}
+.rights-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.right-card{background:var(--linen);border-radius:12px;padding:18px 20px;border:1px solid var(--line)}
+.right-card strong{display:block;font-size:13px;letter-spacing:.04em;color:var(--terra);margin-bottom:6px;text-transform:uppercase}
+.right-card p{font-size:14px;line-height:1.7;opacity:.8;margin:0}
+@media(max-width:640px){.legal-wrap{padding:120px 24px 80px}.rights-grid{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:#221a17;color:var(--cream);padding:48px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center}
+.footer-logo{font-family:"Playfair Display",serif;font-weight:500;font-size:22px;letter-spacing:-.02em;color:var(--cream);text-decoration:none;opacity:.7;transition:opacity .3s}
+.footer-logo:hover{opacity:.6}.footer-logo em{font-style:italic;color:var(--sage-light)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.footer-links a{font-size:12px;opacity:.32;color:var(--cream);text-decoration:none;letter-spacing:.04em;transition:opacity .3s}
+.footer-links a:hover{opacity:.8}
+.footer-copy{font-size:11px;opacity:.22;letter-spacing:.04em}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Let's <em>Flow</em><small>Préa · Jericoacoara · Brésil</small></a>
+  <div class="nav-links">
+    <a href="offres.html" class="nav-link">Nos offres</a>
+    <a href="lieu.html" class="nav-link">Le lieu</a>
+    <a href="kitesurf.html" class="nav-link">Le kitesurf</a>
+    <a href="apropos.html" class="nav-link">À propos de nous</a>
+    <a href="index.html#faq" class="nav-link">FAQ</a>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" type="button" onclick="toggleLang(event)"><span id="langCurrent">FR</span><span class="chev"></span></button>
+      <div class="lang-menu">
+        <button class="lang-option active" data-lang="fr" onclick="setLang('fr',event)"><span>🇫🇷</span><span class="name">Français</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en',event)"><span>🇬🇧</span><span class="name">English</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="pt" onclick="setLang('pt',event)"><span>🇧🇷</span><span class="name">Português</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="es" onclick="setLang('es',event)"><span>🇪🇸</span><span class="name">Español</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+  </div>
+</nav>
+
+<main class="legal-wrap">
+  <h1>Politique de<br><em>confidentialité</em></h1>
+  <p class="legal-meta">Dernière mise à jour : mai 2026 — Conforme au Règlement Général sur la Protection des Données (RGPD)</p>
+
+  <div class="legal-section">
+    <h2>Responsable du traitement</h2>
+    <p>
+      <span class="placeholder">[ Raison sociale ]</span><br>
+      <span class="placeholder">[ Adresse ]</span><br>
+      Email : <a href="mailto:contactletsflow@gmail.com" class="legal-link">contactletsflow@gmail.com</a>
+    </p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Données collectées</h2>
+    <p>Dans le cadre de l'utilisation du site et du formulaire de contact, nous collectons les données suivantes :</p>
+    <ul>
+      <li>Nom et prénom</li>
+      <li>Adresse e-mail</li>
+      <li>Profession (champ optionnel dans le formulaire de contact)</li>
+      <li>Message libre</li>
+      <li>Données de navigation (adresse IP, pages visitées, durée de visite) via les outils d'analyse</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <h2>Finalités du traitement</h2>
+    <p>Les données collectées sont utilisées exclusivement pour :</p>
+    <ul>
+      <li>Répondre à vos demandes de contact et d'information</li>
+      <li>Vous adresser des informations sur nos offres (Wave Summit, Wave Escape) si vous y avez consenti</li>
+      <li>Améliorer l'expérience de navigation sur le site</li>
+      <li>Respecter nos obligations légales et contractuelles</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <h2>Base légale</h2>
+    <p>Le traitement de vos données repose sur :</p>
+    <ul>
+      <li>Votre <strong>consentement</strong> (formulaire de contact, inscription newsletter)</li>
+      <li>L'<strong>exécution d'un contrat</strong> ou de mesures précontractuelles (réservations, devis)</li>
+      <li>Notre <strong>intérêt légitime</strong> à améliorer notre site et nos services</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <h2>Durée de conservation</h2>
+    <p>Vos données sont conservées pendant la durée strictement nécessaire aux finalités poursuivies :</p>
+    <ul>
+      <li>Données de contact : 3 ans à compter du dernier échange</li>
+      <li>Données de navigation : 13 mois maximum</li>
+      <li>Données liées à une commande ou réservation : 5 ans (obligations légales comptables)</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <h2>Vos droits</h2>
+    <p>Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :</p>
+    <div class="rights-grid">
+      <div class="right-card">
+        <strong>Accès</strong>
+        <p>Obtenir une copie de vos données personnelles que nous détenons.</p>
+      </div>
+      <div class="right-card">
+        <strong>Rectification</strong>
+        <p>Corriger des données inexactes ou incomplètes vous concernant.</p>
+      </div>
+      <div class="right-card">
+        <strong>Effacement</strong>
+        <p>Demander la suppression de vos données dans les cas prévus par la loi.</p>
+      </div>
+      <div class="right-card">
+        <strong>Opposition</strong>
+        <p>Vous opposer au traitement de vos données à des fins de prospection.</p>
+      </div>
+      <div class="right-card">
+        <strong>Portabilité</strong>
+        <p>Recevoir vos données dans un format structuré et lisible par machine.</p>
+      </div>
+      <div class="right-card">
+        <strong>Limitation</strong>
+        <p>Demander la suspension du traitement de vos données dans certains cas.</p>
+      </div>
+    </div>
+    <p style="margin-top:20px">Pour exercer ces droits, contactez-nous à : <a href="mailto:contactletsflow@gmail.com" class="legal-link">contactletsflow@gmail.com</a>. Nous répondons dans un délai d'un mois. En cas de réclamation, vous pouvez saisir la <a href="https://www.cnil.fr" class="legal-link" target="_blank" rel="noopener">CNIL</a>.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Cookies</h2>
+    <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement, ainsi que des cookies d'analyse pour mesurer l'audience (de façon anonymisée).</p>
+    <p>Aucun cookie publicitaire ou de ciblage n'est déposé sur votre terminal. Vous pouvez à tout moment configurer votre navigateur pour refuser les cookies, sans que cela affecte votre navigation sur ce site.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Partage des données</h2>
+    <p>Vos données ne sont ni vendues, ni louées, ni cédées à des tiers à des fins commerciales. Elles peuvent être partagées avec des prestataires techniques (hébergement, envoi d'emails) dans le strict cadre de l'exécution de leurs services, et soumis à des obligations de confidentialité.</p>
+    <p>Certains prestataires sont susceptibles d'être établis hors de l'Union européenne. Dans ce cas, des garanties appropriées sont mises en place (clauses contractuelles types, Privacy Shield, etc.).</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Contact</h2>
+    <p>Pour toute question relative à cette politique ou à vos données personnelles :<br>
+    <a href="mailto:contactletsflow@gmail.com" class="legal-link">contactletsflow@gmail.com</a></p>
+    <p>Consultez également nos <a href="mentions-legales.html" class="legal-link">Mentions légales</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Let's <em>Flow</em></a>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="offres.html">Nos offres</a>
+      <a href="lieu.html">Le lieu</a>
+      <a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
+    </div>
+    <div class="footer-copy">© 2026 Let's Flow · Préa, Brésil</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+function toggleLang(e){e.stopPropagation();document.getElementById('langSwitch').classList.toggle('open');}
+document.addEventListener('click',()=>document.getElementById('langSwitch')?.classList.remove('open'));
+function setLang(lang,e){if(e)e.stopPropagation();document.getElementById('langCurrent').textContent=lang.toUpperCase();document.querySelectorAll('.lang-option').forEach(o=>o.classList.toggle('active',o.dataset.lang===lang));document.getElementById('langSwitch').classList.remove('open');}
+</script>
+</body>
+</html>

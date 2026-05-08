@@ -17,7 +17,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="Wave of Implantology — Préa, Brésil · Octobre 2026">
 <meta property="og:description" content="5 jours de conférences en implantologie avec 4 experts français, à Préa au Brésil. 24 places.">
-<meta property="og:image" content="images/implantology-1.jpg">
+<meta property="og:image" content="images/implantology-1.webp">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 
@@ -42,7 +42,7 @@
       "addressCountry": "BR"
     }
   },
-  "image": "images/implantology-1.jpg",
+  "image": "images/implantology-1.webp",
   "organizer": {
     "@type": "Organization",
     "name": "Let's Flow",
@@ -96,6 +96,16 @@ nav.scrolled{background:#221a17;padding:14px 48px;border-bottom:1px solid rgba(2
 .nav-link.active{opacity:1}.nav-link.active::after{transform:scaleX(1);background:var(--terra)}
 .nav-cta{padding:10px 22px;border:1px solid rgba(253,250,244,.4);color:var(--cream);border-radius:40px;font-size:13px;text-decoration:none;transition:all .4s}
 .nav-cta:hover{background:var(--terra)!important;border-color:var(--terra)!important;color:var(--cream)!important}
+.lang-switch{position:relative;margin-right:4px}
+.lang-btn{background:transparent;border:1px solid rgba(253,250,244,.25);border-radius:40px;padding:6px 12px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:inherit;cursor:auto;transition:all .3s;display:inline-flex;align-items:center;gap:6px;opacity:.75;font-family:inherit}
+nav.scrolled .lang-btn{border-color:rgba(253,250,244,.3)}.lang-btn:hover{opacity:1}
+.lang-btn .chev{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);transition:transform .3s;margin-top:-2px}
+.lang-switch.open .lang-btn .chev{transform:rotate(-135deg) translate(-1px,-1px);margin-top:2px}
+.lang-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--cream);color:var(--ink);border-radius:14px;padding:6px;min-width:164px;border:1px solid var(--line);box-shadow:0 12px 32px -8px rgba(28,24,18,.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s;z-index:300}
+.lang-switch.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.lang-option{display:flex;align-items:center;gap:10px;width:100%;background:transparent;border:none;padding:10px 14px;border-radius:9px;font-size:13px;color:var(--ink);cursor:auto;text-align:left;transition:background .2s;font-family:inherit}
+.lang-option:hover{background:var(--beige)}.lang-option.active{background:var(--beige);color:var(--terra)}
+.lang-option .name{flex:1}.lang-option .check{width:14px;height:14px;opacity:0;color:var(--terra)}.lang-option.active .check{opacity:1}
 @media(max-width:640px){.nav-link{display:none}nav,nav.scrolled{padding:14px 20px}}
 
 /* EYEBROW commun */
@@ -258,18 +268,28 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
 
 <nav id="nav">
   <a href="index.html" class="nav-logo">Let's <em>Flow</em><small>Préa · Jericoacoara · Brésil</small></a>
-  <div class="nav-links">
-    <a href="index.html#offres" class="nav-link">Nos offres</a>
-    <a href="kitesurf.html" class="nav-link">Kitesurf</a>
+    <div class="nav-links">
+    <a href="offres.html" class="nav-link active">Nos offres</a>
     <a href="lieu.html" class="nav-link">Le lieu</a>
-    <a href="#inscription" class="nav-link active">S'inscrire</a>
+    <a href="kitesurf.html" class="nav-link">Le kitesurf</a>
+    <a href="apropos.html" class="nav-link">À propos de nous</a>
+    <a href="index.html#faq" class="nav-link">FAQ</a>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" type="button" onclick="toggleLang(event)"><span id="langCurrent">FR</span><span class="chev"></span></button>
+      <div class="lang-menu">
+        <button class="lang-option active" data-lang="fr" onclick="setLang('fr',event)"><span>🇫🇷</span><span class="name">Français</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en',event)"><span>🇬🇧</span><span class="name">English</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="pt" onclick="setLang('pt',event)"><span>🇧🇷</span><span class="name">Português</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+        <button class="lang-option" data-lang="es" onclick="setLang('es',event)"><span>🇪🇸</span><span class="name">Español</span><svg class="check" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+    </div>
     <a href="index.html#contact" class="nav-cta">Nous contacter</a>
   </div>
 </nav>
 
 <!-- ===== HERO ===== -->
 <section class="ev-hero">
-  <img class="ev-hero-bg" src="images/implantology-1.jpg" alt="Wave of Implantology — conférences en implantologie à Préa, Brésil">
+  <img class="ev-hero-bg" src="images/implantology-1.webp" alt="Wave of Implantology — conférences en implantologie à Préa, Brésil">
   <div class="ev-hero-veil"></div>
   <div class="ev-hero-inner">
     <div class="crumbs"><a href="index.html">Let's Flow</a> · Wave Summit · <span style="color:#f5d99c">Implantology</span></div>
@@ -402,7 +422,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
 
 <!-- ===== DESTINATION ===== -->
 <section class="ev-destination">
-  <img class="bg" src="images/kite-beach-life.jpg" alt="Plage de Préa, Brésil — destination de Wave of Implantology">
+  <img class="bg" src="images/kite-beach-life.webp" alt="Plage de Préa, Brésil — destination de Wave of Implantology">
   <div class="ev-destination-content">
     <div class="ev-destination-text">
       <div class="eyebrow">La destination</div>
@@ -491,7 +511,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
   <div class="footer-inner">
     <a href="index.html" class="footer-logo">Let's <em>Flow</em></a>
     <div class="footer-links">
-      <a href="#">Mentions légales</a><a href="#">CGV</a><a href="#">Politique de confidentialité</a><a href="kitesurf.html">Kitesurf</a><a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
+      <a href="mentions-legales.html">Mentions légales</a><a <a href="confidentialite.html">Politique de confidentialité</a><a href="kitesurf.html">Kitesurf</a><a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
     </div>
     <div class="footer-copy">© 2026 Let's Flow · Préa, Brésil</div>
   </div>
