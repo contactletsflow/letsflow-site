@@ -6,7 +6,7 @@
 
 <!-- ===== SEO de base ===== -->
 <title>Let's Flow — Conférences pro & retraites bien-être à Préa, Brésil</title>
-<meta name="description" content="Let's Flow organise des conférences professionnelles d'exception et des retraites bien-être à Préa, Brésil — un des spots les plus emblématiques au monde. Wave Summit (médecine, dentaire), Wave Escape (yoga, kitesurf, déconnexion).">
+<meta name="description" content="Let's Flow organise des conférences et des retraites bien-être à Préa, Brésil. Wave Summit & Wave Escape — deux expériences uniques au bord de l'océan.">
 <meta name="keywords" content="conférence Brésil, séminaire médical Brésil, retraite bien-être, kitesurf Préa, congrès dentaire, événement professionnel Jericoacoara, retraite yoga, conférence implantologie">
 <meta name="author" content="Let's Flow">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -599,7 +599,10 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
         <div class="offre-meta">
           <div><div class="meta-lbl">Lieu</div><div class="meta-val">Préa, <em>Brésil</em></div></div>
         </div>
-        <a href="offres.html#summit" class="btn btn-sage">En savoir plus <span class="arr">→</span></a>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="wavessummit.html" class="btn btn-sage">En savoir plus <span class="arr">→</span></a>
+          <a href="wavessummit.html" class="btn btn-sage">Prochaine édition <span class="arr">→</span></a>
+        </div>
       </div>
     </div>
     <div class="offre escape reveal d2">
@@ -747,7 +750,12 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
   <div class="footer-inner">
     <a href="index.html" class="footer-logo">Let's <em>Flow</em></a>
     <div class="footer-links">
-      <a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Politique de confidentialité</a><a href="lieu.html">Le lieu</a><a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="wavessummit.html">Wave Summit</a>
+      <a href="waveescape.html">Wave Escape</a>
+      <a href="offres.html">Nos offres</a>
+      <a href="mailto:contactletsflow@gmail.com">contactletsflow@gmail.com</a>
     </div>
     <div class="footer-copy">© 2026 Let's Flow · Préa, Brésil</div>
   </div>
@@ -821,7 +829,7 @@ async function handleForm(e){
   success.style.display = 'none';
   error.style.display = 'none';
   try {
-    const res = await fetch('https://formspree.io/f/VOTRE_ID_FORMSPREE', {
+    const res = await fetch('https://formspree.io/f/mlgzpqba', {
       method: 'POST',
       headers: {'Accept': 'application/json'},
       body: new FormData(form)

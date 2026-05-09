@@ -1,0 +1,161 @@
+{
+  "global_score": 95,
+  "pages": [
+    {
+      "file": "apropos.html",
+      "score": 92,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ],
+        [
+          "🟡",
+          "Design",
+          "Navigation incomplète ou différente des autres pages",
+          "Vérifier que tous les liens de nav sont présents dans le bon ordre"
+        ]
+      ],
+      "points": 70,
+      "total": 76
+    },
+    {
+      "file": "confidentialite.html",
+      "score": 97,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ]
+      ],
+      "points": 74,
+      "total": 76
+    },
+    {
+      "file": "index.html",
+      "score": 100,
+      "issues": [],
+      "points": 76,
+      "total": 76
+    },
+    {
+      "file": "kitesurf.html",
+      "score": 92,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ],
+        [
+          "🟡",
+          "Design",
+          "Navigation incomplète ou différente des autres pages",
+          "Vérifier que tous les liens de nav sont présents dans le bon ordre"
+        ]
+      ],
+      "points": 70,
+      "total": 76
+    },
+    {
+      "file": "lieu.html",
+      "score": 89,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ],
+        [
+          "🟢",
+          "Perf",
+          "1 image(s) sans loading=\"lazy\"",
+          "Ajouter loading=\"lazy\" sur les images hors-viewport"
+        ],
+        [
+          "🟡",
+          "Design",
+          "Navigation incomplète ou différente des autres pages",
+          "Vérifier que tous les liens de nav sont présents dans le bon ordre"
+        ]
+      ],
+      "points": 68,
+      "total": 76
+    },
+    {
+      "file": "mentions-legales.html",
+      "score": 97,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ]
+      ],
+      "points": 74,
+      "total": 76
+    },
+    {
+      "file": "offres.html",
+      "score": 92,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ],
+        [
+          "🟡",
+          "Design",
+          "Navigation incomplète ou différente des autres pages",
+          "Vérifier que tous les liens de nav sont présents dans le bon ordre"
+        ]
+      ],
+      "points": 70,
+      "total": 76
+    },
+    {
+      "file": "waveescape.html",
+      "score": 97,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ]
+      ],
+      "points": 74,
+      "total": 76
+    },
+    {
+      "file": "wavessummit.html",
+      "score": 95,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ],
+        [
+          "🟢",
+          "Perf",
+          "5 image(s) sans loading=\"lazy\"",
+          "Ajouter loading=\"lazy\" sur les images hors-viewport"
+        ]
+      ],
+      "points": 72,
+      "total": 76
+    }
+  ],
+  "site_dir": "/sessions/practical-pensive-mendel/mnt/letsflow-site"
+}
