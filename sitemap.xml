@@ -68,4 +68,14 @@
     <priority>0.7</priority>
   </url>
 
+
+  <url>
+    <loc>https://letsflow.com/wavesummit.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://letsflow.com/images/summit-2.webp</image:loc>
+      <image:title>Wave Summit — Conférences & séminaires professionnels à Préa</image:title>
+    </image:image>
+  </url>
 </urlset>

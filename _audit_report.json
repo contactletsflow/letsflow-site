@@ -1,5 +1,5 @@
 {
-  "global_score": 95,
+  "global_score": 93,
   "pages": [
     {
       "file": "apropos.html",
@@ -124,21 +124,27 @@
     },
     {
       "file": "waveescape.html",
-      "score": 97,
+      "score": 92,
       "issues": [
         [
           "🟢",
           "SEO",
           "Twitter Card manquante",
           ""
+        ],
+        [
+          "🟡",
+          "Design",
+          "Navigation incomplète ou différente des autres pages",
+          "Vérifier que tous les liens de nav sont présents dans le bon ordre"
         ]
       ],
-      "points": 74,
+      "points": 70,
       "total": 76
     },
     {
       "file": "wavessummit.html",
-      "score": 95,
+      "score": 89,
       "issues": [
         [
           "🟢",
@@ -151,9 +157,35 @@
           "Perf",
           "5 image(s) sans loading=\"lazy\"",
           "Ajouter loading=\"lazy\" sur les images hors-viewport"
+        ],
+        [
+          "🟡",
+          "Design",
+          "Navigation incomplète ou différente des autres pages",
+          "Vérifier que tous les liens de nav sont présents dans le bon ordre"
         ]
       ],
-      "points": 72,
+      "points": 68,
+      "total": 76
+    },
+    {
+      "file": "wavesummit.html",
+      "score": 92,
+      "issues": [
+        [
+          "🟢",
+          "SEO",
+          "Twitter Card manquante",
+          ""
+        ],
+        [
+          "🟡",
+          "Design",
+          "Navigation incomplète ou différente des autres pages",
+          "Vérifier que tous les liens de nav sont présents dans le bon ordre"
+        ]
+      ],
+      "points": 70,
       "total": 76
     }
   ],
