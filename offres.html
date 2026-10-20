@@ -77,6 +77,15 @@ nav.scrolled .lang-btn{border-color:rgba(253,250,244,.3)}.lang-btn:hover{opacity
 .offres{padding:80px 48px 100px;background:var(--warm-white)}
 .offres-inner{max-width:1300px;margin:0 auto}
 .offres-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.next-ed{margin-top:24px;display:grid;grid-template-columns:320px 1fr auto;gap:36px;align-items:center;background:linear-gradient(160deg,#fff 0%,#fff7ee 70%,#f7e3d2 100%);border:1px solid rgba(184,90,48,.18);border-radius:24px;padding:20px 36px 20px 20px;text-decoration:none;color:var(--ink);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.next-ed:hover{transform:translateY(-4px);box-shadow:0 24px 60px -24px rgba(140,58,28,.3)}
+.next-ed img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:16px;display:block}
+.next-ed-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:#b85a30;margin-bottom:10px}
+.next-ed h3{font-family:"Playfair Display",serif;font-size:clamp(26px,3vw,38px);font-weight:500;letter-spacing:-.02em;line-height:1.05}
+.next-ed h3 em{font-style:italic;font-weight:400;color:#b85a30}
+.next-ed p{font-size:14px;line-height:1.65;color:#3d2f1e;opacity:.8;margin-top:10px;max-width:52ch}
+.next-ed-cta{background:#b85a30;color:#fdfaf4;padding:14px 26px;border-radius:50px;font-size:14px;white-space:nowrap}
+@media(max-width:900px){.next-ed{grid-template-columns:1fr;gap:18px;padding:16px 16px 26px}.next-ed-cta{justify-self:start}}
 
 .offre-card{border-radius:28px;overflow:hidden;position:relative;min-height:640px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:var(--cream);transition:transform .7s cubic-bezier(.2,.8,.2,1),box-shadow .7s;border:1px solid var(--line)}
 .offre-card:hover{transform:translateY(-10px);box-shadow:0 44px 100px -36px rgba(28,24,18,.35)}
@@ -175,7 +184,7 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
   <div class="offres-inner">
     <div class="offres-grid">
 
-      <a href="wavessummit.html" class="offre-card summit reveal">
+      <a href="wavesummit.html" class="offre-card summit reveal">
         <img loading="lazy" src="images/summit-2.webp" alt="Wave Summit — conférence professionnelle à Préa">
         <div class="offre-veil"></div>
         <div class="offre-body">
@@ -208,6 +217,16 @@ footer{background:#221a17;color:var(--cream);padding:52px 48px;border-top:1px so
       </a>
 
     </div>
+
+    <a href="waveescape-premiere-escale.html" class="next-ed reveal">
+      <img loading="lazy" src="images/lagoa1.webp" alt="Wave Escape — Première Escale, lagon de Préa">
+      <div>
+        <div class="next-ed-tag">Prochaine édition · Wave Escape</div>
+        <h3>Première <em>Escale</em> — 11 au 18 juillet 2027</h3>
+        <p>8 jours à Préa : yoga matin et soir, kitesurf tous niveaux, lagons, quad dans les dunes, soirée à Jericoacoara. Villas avec piscine, demi-pension incluse.</p>
+      </div>
+      <span class="next-ed-cta">Voir le programme →</span>
+    </a>
   </div>
 </section>
 
